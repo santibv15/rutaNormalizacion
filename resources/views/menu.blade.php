@@ -52,6 +52,27 @@
                 </ul>
               </li>
 
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Regionales
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="{{Route('ViewRegional')}}">Listado de regionales</a></li>
+                  <li><a class="dropdown-item" href="{{ Route('InsertRegional')}}">Registrar Regional</a></li>
+
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Centro Fomarcion
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="{{Route('ViewCentrof')}}">Listado de centros</a></li>
+                  <li><a class="dropdown-item" href="{{ Route('ViewInsertCentrof')}}">Registrar centro</a></li>
+
+                </ul>
+              </li>
 
 
             </ul>

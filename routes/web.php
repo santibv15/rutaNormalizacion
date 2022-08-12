@@ -54,7 +54,7 @@ Route::get('Categoria/delete/{id}', 'CategoriaController@DeleteCategoria')->name
 Route::get('MesaSectorial/insert', function (){
     return view('MesaSectorial/insert');
 })->name('insertmesa');
-
+//insert de mesa
 Route::post('MesaSectorial/insert', 'MesaController@InsertMesa')->name('InsertMesa');
 
 Route::get('MesaSectorial/view', 'MesaController@ViewMesa')->name('ViewMesa');
@@ -65,3 +65,36 @@ Route::post('MesaSectorial/update', 'MesaController@UpdateBdMesa') ->name('Updat
 
 Route::get('MesaSectorial/Delete/{id}', 'MesaController@DeleteMesa')->name('DeleteMesa');
 #endregion
+
+#region de regional
+Route::get('Regional/insert', function(){
+    return view('Regional/insert');
+})->name('insertregional');
+
+Route::post('Regional/insert', 'RegionalController@InsertRegional')->name('InsertRegional');
+
+Route::get('Regional/view', 'RegionalController@ViewRegional')->name('ViewRegional');
+
+Route::get('Regional/update/{id}', 'RegionalController@UpdateRegional')->name('UpdateRegional');
+
+Route::post('Regional/update', 'RegionalController@UpdateBdRegional')->name('UpdateBdRegional');
+
+Route::get('Regional/Delete/{id}', 'RegionalController@DeleteRegional')->name('DeleteRegional');
+
+#endregion
+
+#region Centro de formacion
+
+Route::get('CentroFormacion/insert', 'CentrofController@ViewInsertCentrof')->name('ViewInsertCentrof');
+
+Route::post('CentroFormacion/insert', 'CentrofController@InsertCentrof')->name('InsertCentrof');
+
+Route::get('CentroFormacion/view', 'CentrofController@ViewCentrof')->name('ViewCentrof');
+
+Route::get('CentroFormacion/update/{id}', 'CentrofController@UpdateRegional')->name('UpdateCentrof');
+
+Route::post('CentroFormacion/update', 'CentrofController@UpdateBdRegional')->name('UpdateBdCentrof');
+
+Route::get('CentroFormacion/Delete/{id}', 'CentrofController@DeleteCentrof')->name('DeleteCentrof');
+    
+#end region

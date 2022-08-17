@@ -25,11 +25,11 @@
      <tr>
 
         <td>{{$centrof->nombre}}</td>
-        <td>{{$centrof->regional_id}}</td>
+        <td>{{$centrof->nombre_region}}</td>
        
         <td>
-            <a href="{{Route('DeleteCentrof', $centrof)}}"> <i class='bx bxs-message-square-x'></i></a>
-            <a href=""><i class='bx bx-rotate-right'></i></a> 
+            <a href="{{Route('DeleteCentrof', $centrof->id)}}"> <i class='bx bxs-message-square-x'></i></a>
+            <a href="{{Route('UpdateCentrof', $centrof->id)}}"><i class='bx bx-rotate-right'></i></a> 
              {{-- <i class='bx bxs-bullseye'></i> --}}
            </td>
      </tr>

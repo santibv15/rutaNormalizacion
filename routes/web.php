@@ -91,10 +91,19 @@ Route::post('CentroFormacion/insert', 'CentrofController@InsertCentrof')->name('
 
 Route::get('CentroFormacion/view', 'CentrofController@ViewCentrof')->name('ViewCentrof');
 
-Route::get('CentroFormacion/update/{id}', 'CentrofController@UpdateRegional')->name('UpdateCentrof');
+Route::get('CentroFormacion/update/{id}', 'CentrofController@UpdateCentrof')->name('UpdateCentrof');
 
-Route::post('CentroFormacion/update', 'CentrofController@UpdateBdRegional')->name('UpdateBdCentrof');
+Route::post('CentroFormacion/update', 'CentrofController@UpdateBdCentrof')->name('UpdateBdCentrof');
 
 Route::get('CentroFormacion/Delete/{id}', 'CentrofController@DeleteCentrof')->name('DeleteCentrof');
     
 #end region
+
+
+#region NSCL
+
+Route::get('Nscl/insert', 'NsclController@ViewInsertNscl')->name('ViewInsertNscl');
+
+
+
+#endregion

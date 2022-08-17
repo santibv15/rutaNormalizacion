@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App;
+use Illuminate\Support\Facades\DB;
 class CentrofController extends Controller
+
 {
     public function ViewInsertCentrof ()
     {
@@ -19,12 +21,15 @@ class CentrofController extends Controller
         $instanciacentrof -> regional_id = $centrof -> regional_id;
         $instanciacentrof -> save (); 
 
-        return redirect('CentroFromacion/view')->with('hecho', 'guardado');
+        return redirect('CentroFormacion/view')->with('hecho', 'guardado');
     }
 
     public function ViewCentrof()
     {
-        $objetoretornado = App\centro_formacion::All();
+        $objetoretornado = DB::table('centro_formacions')
+                            ->join('regionales', 'regionales.id', '=', 'centro_formacions.regional_id')
+                            ->select('centro_formacions.*', 'regionales.nombre_region', 'Centro_formacions.nombre')
+                            ->get();
         return view('CentroFormacion/view', compact('objetoretornado'));
     }
 
@@ -32,7 +37,7 @@ class CentrofController extends Controller
     public function UpdateCentrof($id)
     {
         $updatecentrof = App\centro_formacion::FindOrFail($id);
-        return view('Centro/update', compact('updatecentrof'));
+        return view('CentroFormacion/update', compact('updatecentrof'));
 
 
     }

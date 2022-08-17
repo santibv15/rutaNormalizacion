@@ -1,6 +1,6 @@
 @extends('menu')
 @section('contenido')
-    <form action="" method="POST" >
+    <form action="{{Route('InsertCentrof')}}" method="POST" >
         @csrf <!--esto es para el token-->
         <label for="nombre">nombre del centro</label>
         <input type="text" name="nombre" placeholder="ingrese nombre">

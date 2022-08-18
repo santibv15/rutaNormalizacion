@@ -3,7 +3,7 @@
 
 
 
-<form action="{{route('InsertNscl')}}" method="POST">
+<form action="{{route('InsertNscl')}}" method="POST" enctype="multipart/form-data">
     @csrf
     <label for="titulo">titulo: </label>
     <input type="text" name="titulo" placeholder="ingrese titulo de nscl">
@@ -19,8 +19,8 @@
     <input type="date" name="fecha_aprobacion">
     <label for="n_aprobacion">numero aprobacion: </label>
     <input type="text" name="n_aprobacion" placeholder="ingrese numero de aprobacion">
-    <label for="documento"> adjunte pdf: </label>
-    <input type="file" name="foto" accept=".pdf">
+    <label for="documentos"> adjunte pdf: </label>
+    <input type="file" name="documento" accept=".pdf">
 
     <label for="mesa">mesa sectorial: </label>
     <select name="mesa_sectorial" id="ui search dropdown" >

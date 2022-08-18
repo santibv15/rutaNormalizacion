@@ -37,7 +37,7 @@
         <td>{{$nscl->tipo_estado}}</td>
         <td>{{$nscl->nombre}}</td>
         <td>{{$nscl->tipo_categoria}}</td>
-        <td><a href="{{route('DeleteNscl', $nscl->id)}}"> <i class='bx bxs-message-square-x'></i></a></td>
+        <td><a href="{{}}"> <i class='bx bxs-message-square-x'></i></a></td>
        
         <td>
             <a href="{{route('DeleteNscl', $nscl->id)}}"> <i class='bx bxs-message-square-x'></i></a>

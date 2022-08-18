@@ -30,6 +30,7 @@
         <a href="{{Route('DeleteRegional', $regional)}}"> <i class='bx bxs-message-square-x'></i></a>
         <a href="{{Route('UpdateRegional', $regional)}}"><i class='bx bx-rotate-right'></i></a> 
          {{-- <i class='bx bxs-bullseye'></i> --}}
+         <h1>holaaa</h1>
        </td>
      </tr>
      

@@ -2,7 +2,7 @@
 @section('contenido')
 
 
-<form action="{{Route('UpdateBdNscl')}}" method="POST">
+<form action="{{Route('UpdateBdNscl')}}" method="POST" enctype="multipart/form-data">
     @csrf
     <input type="hidden" name="id" value="{{$updatenscl->id}}">
     <label for="titulo">titulo: </label>

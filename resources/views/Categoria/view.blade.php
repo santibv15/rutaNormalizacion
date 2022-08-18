@@ -28,8 +28,8 @@
        <td>{{$categoria->ambito}}</td>
        
        <td>
-        <a href="{{Route('DeleteCategoria', $categoria)}}"><i class='bx bxs-message-square-x'></i></a>
-        <a href="{{Route('UpdateCategoria', $categoria)}}"><i class='bx bx-rotate-right'></i></a> 
+        <a href="{{Route('DeleteCategoria', $categoria->id)}}"><i class='bx bxs-message-square-x'></i></a>
+        <a href="{{Route('UpdateCategoria', $categoria->id)}}"><i class='bx bx-rotate-right'></i></a> 
          {{-- <i class='bx bxs-bullseye'></i> --}}
        </td>
      </tr>

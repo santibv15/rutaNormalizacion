@@ -104,6 +104,12 @@ Route::get('CentroFormacion/Delete/{id}', 'CentrofController@DeleteCentrof')->na
 
 Route::get('Nscl/insert', 'NsclController@ViewInsertNscl')->name('ViewInsertNscl');
 
+Route::post('Nscl/insert', 'NsclController@InsertNscl')->name('InsertNscl');
+
+Route::get('Nscl/view', 'NsclController@ViewNscl')->name('ViewNscl');
 
 
+Route::get('Nscl/Delete/{id}', 'NsclController@DeleteNscl')->name('DeleteNscl');
+
+//Route::get('')
 #endregion

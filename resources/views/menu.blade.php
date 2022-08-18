@@ -79,7 +79,7 @@
                   NSCL
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="">Listado de documentos</a></li>
+                  <li><a class="dropdown-item" href="{{Route('ViewNscl')}}">Listado de documentos</a></li>
                   <li><a class="dropdown-item" href="{{Route('ViewInsertNscl')}}">Registrar documentos</a></li>
 
                 </ul>

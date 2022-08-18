@@ -59,6 +59,50 @@ class NsclController extends Controller
         return view('Nscl/view', compact('objetoretornado'));
     }
 
+
+    public function UpdateNscl($id)
+    {
+        $updatenscl = App\nscl::FindOrFail($id);
+        $infomesa = App\mesa_sectorial::All();
+        $infoestadop = App\estado_producto::All();
+        $infocentrof = App\centro_formacion::All();
+        $infocategoria = App\categoria::All();
+        
+
+        
+        return view('Nscl/update', compact('updatenscl','infomesa','infoestadop', 'infocentrof','infocategoria' ));
+
+
+    }
+
+    public function UpdateBdNscl(Request $nscl)
+    {
+        $ruta = Storage::disk('public')->put('nscl', $nscl->file('documento'));
+        $campo = asset($ruta);
+        $instancianscl = App\nscl::FindOrFail($nscl->id);
+        $instancianscl -> titulo = $nscl ->titulo;
+        $instancianscl -> codigo_nscl = $nscl ->codigo_nscl;
+        $instancianscl -> version = $nscl -> version;
+        $instancianscl -> fecha_publicacion = $nscl -> fecha_publicacion;
+        $instancianscl -> fecha_revision = $nscl -> fecha_revision;
+        $instancianscl -> fecha_aprobacion = $nscl -> fecha_aprobacion;
+        $instancianscl -> n_aprobacion = $nscl -> n_aprobacion;
+
+        $instancianscl -> documento = $campo;
+        $instancianscl -> documento_url = $campo;
+
+        $instancianscl -> mesa_sectorial_id = $nscl -> mesa_sectorial;
+        $instancianscl -> estado_producto_id = $nscl -> estado_producto;
+        $instancianscl -> centro_formacion_id = $nscl -> centro_formacion;
+        $instancianscl -> categoria_id = $nscl -> categoria;
+        $instancianscl -> save();
+
+        return redirect('Nscl/view')->with('hecho', 'actualizado');
+
+    }
+
+
+
     public function DeleteNscl($id)
     {
         $deletenscl = App\nscl::FindOrFail($id);

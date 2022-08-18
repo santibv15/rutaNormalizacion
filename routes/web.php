@@ -108,6 +108,9 @@ Route::post('Nscl/insert', 'NsclController@InsertNscl')->name('InsertNscl');
 
 Route::get('Nscl/view', 'NsclController@ViewNscl')->name('ViewNscl');
 
+ Route::get('Nscl/update/{id}', 'NsclController@UpdateNscl')->name('UpdateNscl');
+
+Route::post('Nscl/update', 'NsclController@UpdateBdNscl')->name('UpdateBdNscl');
 
 Route::get('Nscl/Delete/{id}', 'NsclController@DeleteNscl')->name('DeleteNscl');
 

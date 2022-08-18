@@ -48,7 +48,7 @@
        
         <td>
             <a href="{{route('DeleteNscl', $nscl->id)}}"> <i class='bx bxs-message-square-x'></i></a>
-            <a href=""><i class='bx bx-rotate-right'></i></a> 
+            <a href="{{route('UpdateNscl', $nscl->id)}}"><i class='bx bx-rotate-right'></i></a> 
              {{-- <i class='bx bxs-bullseye'></i> --}}
            </td>
      </tr>

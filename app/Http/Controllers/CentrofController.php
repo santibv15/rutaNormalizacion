@@ -36,27 +36,24 @@ class CentrofController extends Controller
 
     public function UpdateCentrof($id)
     {
-        $inforegional = DB::table('centro_formacions')
-                        ->join('regionales', 'regionales.id', '=', 'centro_formacions.regional_id')
-                        ->select('centro_formacions.*', 'regionales.nombre_region', 'Centro_formacions.nombre')
-                        ->get();
-        return view('CentroFormacion/update', compact('inforegional'));
+        $updatecentrof = App\centro_formacion::FindOrFail($id);
+        $inforegional = App\regionale::All();
+        
+        return view('CentroFormacion/update', compact('updatecentrof','inforegional'));
 
 
     }
 
-    // public function UpdateBdCentrof(Request $centrof)
-    // {
-    //     $instanciacentrof = App\centro_formacion::FindOrFail($centrof->id);
-    //     $instanciacentrof -> nombre = $centrof ->nombre;
-    //     $instanciacentrof -> save();
+    public function UpdateBdCentrof(Request $centrof)
+    {
+        $instanciacentrof = App\centro_formacion::FindOrFail($centrof->id);
+        $instanciacentrof -> nombre = $centrof ->nombre;
+        $instanciacentrof -> regional_id = $centrof ->regional_id;
+        $instanciacentrof -> save();
 
-    //     return redirect('CentroFormacion/view')->with('hecho', 'actualizado');
+        return redirect('CentroFormacion/view')->with('hecho', 'actualizado');
 
-    // }
-
-
-
+    }
 
 
     public function DeleteCentrof($id)

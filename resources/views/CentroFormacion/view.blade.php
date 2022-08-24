@@ -12,8 +12,9 @@
 <table class="table">
    <thead>
      <tr>
-        <th scope="col">nombre del centro </th>
-       <th scope="col">regional</th>
+        <th scope="col">Nombre del centro </th>
+       <th scope="col">Regional</th>
+       <th scope="col">Opciones</th>
      </tr>
    </thead>
 

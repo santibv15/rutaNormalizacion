@@ -12,9 +12,9 @@
 <table class="table">
    <thead>
      <tr>
-       <th scope="col">categoria</th>
-       <th scope="col">ambito</th>
-       <th scope="col">opciones</th>
+       <th scope="col">Categoria</th>
+       <th scope="col">Ambito</th>
+       <th scope="col">Opciones</th>
      </tr>
    </thead>
 

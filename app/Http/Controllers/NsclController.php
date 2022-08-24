@@ -20,8 +20,9 @@ class NsclController extends Controller
 
     public function InsertNscl(Request $nscl)
     {
+        $instancianscl= new App\nscl;
         $ruta = Storage::disk('public')->put('nscl', $nscl->file('documento'));
-        $campo = asset($ruta);
+        
         $instancianscl = new App\nscl();
         $instancianscl -> titulo = $nscl ->titulo;
         $instancianscl -> codigo_nscl = $nscl ->codigo_nscl;
@@ -31,8 +32,8 @@ class NsclController extends Controller
         $instancianscl -> fecha_aprobacion = $nscl -> fecha_aprobacion;
         $instancianscl -> n_aprobacion = $nscl -> n_aprobacion;
 
-        $instancianscl -> documento = $campo;
-        $instancianscl -> documento_url = $campo;
+        $instancianscl -> documento = $ruta;
+        $instancianscl -> documento_url = $ruta;
 
         $instancianscl -> mesa_sectorial_id = $nscl -> mesa_sectorial;
         $instancianscl -> estado_producto_id = $nscl -> estado_producto;
@@ -78,7 +79,6 @@ class NsclController extends Controller
     public function UpdateBdNscl(Request $nscl)
     {
         $ruta = Storage::disk('public')->put('nscl', $nscl->file('documento'));
-        $campo = asset($ruta);
         $instancianscl = App\nscl::FindOrFail($nscl->id);
         $instancianscl -> titulo = $nscl ->titulo;
         $instancianscl -> codigo_nscl = $nscl ->codigo_nscl;
@@ -88,8 +88,8 @@ class NsclController extends Controller
         $instancianscl -> fecha_aprobacion = $nscl -> fecha_aprobacion;
         $instancianscl -> n_aprobacion = $nscl -> n_aprobacion;
 
-        $instancianscl -> documento = $campo;
-        $instancianscl -> documento_url = $campo;
+        $instancianscl -> documento = $ruta;
+        $instancianscl -> documento_url = $ruta;
 
         $instancianscl -> mesa_sectorial_id = $nscl -> mesa_sectorial;
         $instancianscl -> estado_producto_id = $nscl -> estado_producto;

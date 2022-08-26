@@ -4,7 +4,7 @@
 
 
 <section id="basic-input">
-    <form action="{{Route('InsertCategoria')}}" method="POST">
+    <form action="{{Route('InsertCategoria')}}" method="POST" class="needs-validation"  novalidate>
         @csrf
     <div class="row">
         <div class="col-md-12">
@@ -16,16 +16,17 @@
                     <div class="row">
                         <div class="col-xl-4 col-md-6 col-12">
                             <div class="mb-1">
-                                <label class="form-label" for="basicInput">Categoria: </label>
-                                <input type="text" class="form-control" name="tipo_categoria" id="basicInput" placeholder=" Ingrese el tipo de categoria" />
+                                <label class="form-label" for="tipo_categoria">Categoria: </label>
+                                <input type="text" class="form-control" name="tipo_categoria" id="tipo_categoria" placeholder=" Ingrese el tipo de categoria" required />
+                                <div class="invalid-tooltip">El valor "Categoria" es Obligatorio.</div>
                             </div>
                         </div>
                         
                         <div class="col-xl-4 col-md-6 col-12">
                             <div class="mb-1">
-                                <label class="form-label" for="helperText">Ambito: </label>
-                                <input type="text" id="helperText" name="ambito" class="form-control" placeholder="Ingrese el ambito" />
-                              
+                                <label class="form-label" for="ambito">Ambito: </label>
+                                <input type="text" id="ambito" name="ambito" class="form-control" placeholder="Ingrese el ambito"  required/>
+                                <div class="invalid-tooltip">El valor "Ambito" es Obligatorio.</div>
                             </div>
                          </div>
 
@@ -47,4 +48,5 @@
     
 </form>
 </section>
+
 @endsection

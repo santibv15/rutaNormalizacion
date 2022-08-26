@@ -16,23 +16,23 @@
                     <div class="row">
                         <div class="col-xl-4 col-md-6 col-12">
                             <div class="mb-1">
-                                <label class="form-label" for="basicInput">Centro de formacion: </label>
-                                <input type="text" class="form-control" name="nombre" id="basicInput" placeholder=" Ingrese el nombre del centro"  required/>
-                                <div class="invalid-tooltip">El valor centro de formacion es Obligatorio.</div>
+                                <label class="form-label" for="nombre">Centro de formacion: </label>
+                                <input type="text" class="form-control" name="nombre" id="nombre" placeholder=" Ingrese el nombre del centro"  required/>
+                                <div class="invalid-tooltip">El valor "Centro de formacion" es Obligatorio.</div>
                             </div>
                         </div>
 
                          
                                 <div class="col-xl-4 col-md-6 col-12">
                                     <div class="mb-1">
-                                        <label class="form-label" for="basicInput">Regional: </label>
-                                        <select name="regional_id" id="ui search dropdown"  class="form-control" required>
+                                        <label class="form-label" for="regional_id">Regional: </label>
+                                        <select name="regional_id" id="regional_id"  class="form-control" required>
                                             <option value="">Seleccione un regional</option>
                                             @foreach ($inforegional as $regional)
                                            <option value="{{$regional->id}}">{{$regional->nombre_region}}</option>
                                             @endforeach
                                         </select>
-                                        <div class="invalid-tooltip">El valor Regional es Obligatorio.</div>
+                                        <div class="invalid-tooltip">El valor "Regional" es Obligatorio.</div>
                                     </div>
                                 </div>
                             

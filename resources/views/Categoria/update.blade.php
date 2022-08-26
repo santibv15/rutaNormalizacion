@@ -17,16 +17,16 @@
                     <div class="row">
                         <div class="col-xl-4 col-md-6 col-12">
                             <div class="mb-1">
-                                <label class="form-label" for="basicInput">Categoria: </label>
-                                <input type="text" class="form-control" name="tipo_categoria" id="basicInput" value="{{$updatecategoria->tipo_categoria}}" required/>
+                                <label class="form-label" for="tipo_categoria">Categoria: </label>
+                                <input type="text" class="form-control" name="tipo_categoria" id="tipo_categoria" value="{{$updatecategoria->tipo_categoria}}" required/>
                                 <div class="invalid-tooltip">El "Categoria" es Obligatorio.</div>
                             </div>
                         </div>
                         
                         <div class="col-xl-4 col-md-6 col-12">
                             <div class="mb-1">
-                                <label class="form-label" for="helperText">Ambito: </label>
-                                <input type="text" id="helperText" name="ambito" class="form-control" value="{{$updatecategoria->ambito}}" required/>
+                                <label class="form-label" for="ambito">Ambito: </label>
+                                <input type="text" id="ambito" name="ambito" class="form-control" value="{{$updatecategoria->ambito}}" required/>
                                 <div class="invalid-tooltip">El valor "Ambito" es Obligatorio.</div>
                             </div>
                          </div>

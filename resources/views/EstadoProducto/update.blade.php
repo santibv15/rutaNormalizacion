@@ -3,7 +3,7 @@
 
 
 <section id="basic-input">
-    <form action="{{Route('UpdateBdEstadoP')}}" method="POST">
+    <form action="{{Route('UpdateBdEstadoP')}}" method="POST" class="needs-validation"  novalidate>
         @csrf
         <input type="hidden" name="id" value="{{$updateestadop->id}}">
     <div class="row">
@@ -17,7 +17,8 @@
                         <div class="col-xl-4 col-md-6 col-12">
                             <div class="mb-1">
                                 <label class="form-label" for="basicInput">Estado del producto: </label>
-                                <input type="text" class="form-control" name="tipo_estado" id="basicInput" value="{{$updateestadop->tipo_estado}}">
+                                <input type="text" class="form-control" name="tipo_estado" id="basicInput" value="{{$updateestadop->tipo_estado}}" required>
+                                <div class="invalid-tooltip">El "Estado del producto" es Obligatorio.</div>
                             </div>
                         </div>
                         

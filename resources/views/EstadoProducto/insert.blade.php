@@ -18,7 +18,7 @@
                             <div class="mb-1">
                                 <label class="form-label" for="basicInput">Estado del producto: </label>
                                 <input type="text" class="form-control" name="tipo_estado" id="basicInput" placeholder=" Ingrese el estado" required/>
-                                <div class="invalid-tooltip">El valor Estado es Obligatorio.</div>
+                                <div class="invalid-tooltip">El valor "Estado del producto" es Obligatorio.</div>
                             </div>
                         </div>
                         

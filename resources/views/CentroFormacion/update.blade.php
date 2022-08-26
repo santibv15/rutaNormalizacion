@@ -19,8 +19,8 @@
                     <div class="row">
                         <div class="col-xl-4 col-md-6 col-12">
                             <div class="mb-1">
-                                <label class="form-label" for="basicInput">Centro de formacion: </label>
-                                <input type="text" class="form-control" name="nombre" id="basicInput" value="{{$updatecentrof->nombre}}" required/>
+                                <label class="form-label" for="nombre">Centro de formacion: </label>
+                                <input type="text" class="form-control" name="nombre" id="nombre" value="{{$updatecentrof->nombre}}" required/>
                                 <div class="invalid-tooltip">El "Centro de formacion" es Obligatorio.</div>
                             </div>
                         </div>
@@ -28,8 +28,8 @@
                          
                                 <div class="col-xl-4 col-md-6 col-12">
                                     <div class="mb-1">
-                                        <label class="form-label" for="basicInput">Regional: </label>
-                                        <select name="regional_id" id="ui search dropdown"  class="form-control" required>
+                                        <label class="form-label" for="regional_id">Regional: </label>
+                                        <select name="regional_id" id="regional_id"  class="form-control" required>
                                             <option value="">Seleccione un regional</option>
                                             @foreach ($inforegional as $regional)
                                             

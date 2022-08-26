@@ -1,4 +1,4 @@
-@extends('menu')
+@extends('layouts.app')
 
 @section('contenido')
 
@@ -37,4 +37,5 @@
      @endforeach
    </tbody>
  </table>
+ @include('layouts.footer')
 @endsection

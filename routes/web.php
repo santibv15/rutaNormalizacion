@@ -71,6 +71,7 @@ Route::get('Regional/insert', function(){
     return view('Regional/insert');
 })->name('insertregional');
 
+Route::get('Regional/listJson','RegionalController@resuljson')->name('VerlistaJ');
 Route::post('Regional/insert', 'RegionalController@InsertRegional')->name('InsertRegional');
 
 Route::get('Regional/view', 'RegionalController@ViewRegional')->name('ViewRegional');
@@ -80,6 +81,8 @@ Route::get('Regional/update/{id}', 'RegionalController@UpdateRegional')->name('U
 Route::post('Regional/update', 'RegionalController@UpdateBdRegional')->name('UpdateBdRegional');
 
 Route::get('Regional/Delete/{id}', 'RegionalController@DeleteRegional')->name('DeleteRegional');
+
+
 
 #endregion
 

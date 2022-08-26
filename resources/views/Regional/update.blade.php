@@ -1,8 +1,7 @@
 
 
 
-
-@extends('menu')
+@extends('layouts.app')
 
 @section('contenido')
 
@@ -46,4 +45,5 @@
     
 </form>
 </section>
+@include('layouts.Footer')
 @endsection

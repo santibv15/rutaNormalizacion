@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App;
 class RegionalController extends Controller
 {
+
     public function InsertRegional(Request $regional)
     {
         $instanciaregional = new App\regionale;
@@ -19,6 +20,13 @@ class RegionalController extends Controller
         $objetoretornado = App\regionale::All();
         return view('Regional/view', compact('objetoretornado'));
     }
+
+    public function resuljson(){
+        $verp =  App\regionale::All();
+        $datos = array('data' => $verp);
+        return $datos;
+    }
+
 
     public function UpdateRegional($id)
     {

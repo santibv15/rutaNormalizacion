@@ -1,39 +1,45 @@
 <!DOCTYPE html>
 <html class="loading" lang="en" data-textdirection="ltr">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0,minimal-ui">
-    <meta name="description" content="Proyecto para el manejo de ambientes de formacion">
-    <meta name="keywords" content="Proyecto Ambientes CTGI - GIAITEQ">
-    <meta name="author" content="SENNOVA CTGI">
-    <title>rutaNormalizacion</title>
-    <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('images/favicon/apple-icon-57x57.png')}}">
-    <link rel="apple-touch-icon" sizes="60x60" href="{{ asset('images/favicon/apple-icon-60x60.png')}}">
-    <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('images/favicon/apple-icon-72x72.png')}}">
-    <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('images/favicon/apple-icon-76x76.png')}}">
-    <link rel="apple-touch-icon" sizes="114x114" href="{{ asset('images/favicon/apple-icon-114x114.png')}}">
-    <link rel="apple-touch-icon" sizes="120x120" href="{{ asset('images/favicon/apple-icon-120x120.png')}}">
-    <link rel="apple-touch-icon" sizes="144x144" href="{{ asset('images/favicon/apple-icon-144x144.png')}}">
-    <link rel="apple-touch-icon" sizes="152x152" href="{{ asset('images/favicon/apple-icon-152x152.png')}}">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('images/favicon/apple-icon-180x180.png')}}">
-    <link rel="icon" type="image/png" sizes="192x192" href="{{asset('images/favicon/android-icon-192x192.png')}}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/favicon/favicon-32x32.png')}}">
-    <link rel="icon" type="image/png" sizes="96x96" href="{{ asset('images/favicon/favicon-96x96.png')}}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/favicon/favicon-16x16.png')}}">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{{ asset('vendors/css/vendors.min.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap-extended.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/colors.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/components.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/themes/dark-layout.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/themes/bordered-layout.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/themes/semi-dark-layout.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/core/menu/menu-types/vertical-menu.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css')}}">
-    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-</head>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0,minimal-ui">
+        <meta name="description" content="Proyecto para el manejo de ambientes de formacion">
+        <meta name="keywords" content="Proyecto Ambientes CTGI - GIAITEQ">
+        <meta name="author" content="SENNOVA CTGI">
+        <title>Sistema Gestion de Ambientes de Formacion y Programacion Instructores - CTGI - GIAITEQ</title>
+        <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('images/favicon/apple-icon-57x57.png') }}">
+        <link rel="apple-touch-icon" sizes="60x60" href="{{ asset('images/favicon/apple-icon-60x60.png') }}">
+        <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('images/favicon/apple-icon-72x72.png') }}">
+        <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('images/favicon/apple-icon-76x76.png') }}">
+        <link rel="apple-touch-icon" sizes="114x114" href="{{ asset('images/favicon/apple-icon-114x114.png') }}">
+        <link rel="apple-touch-icon" sizes="120x120" href="{{ asset('images/favicon/apple-icon-120x120.png') }}">
+        <link rel="apple-touch-icon" sizes="144x144" href="{{ asset('images/favicon/apple-icon-144x144.png') }}">
+        <link rel="apple-touch-icon" sizes="152x152" href="{{ asset('images/favicon/apple-icon-152x152.png') }}">
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('images/favicon/apple-icon-180x180.png') }}">
+        <link rel="icon" type="image/png" sizes="192x192" href="{{ asset('images/favicon/android-icon-192x192.png') }}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/favicon/favicon-32x32.png') }}">
+        <link rel="icon" type="image/png" sizes="96x96" href="{{ asset('images/favicon/favicon-96x96.png') }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/favicon/favicon-16x16.png') }}">
+        <link href="{{ asset('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600') }}" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{{ asset('vendors/css/vendors.min.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('vendors/css/tables/datatable/dataTables.bootstrap5.min.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('vendors/css/tables/datatable/responsive.bootstrap5.min.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('vendors/css/tables/datatable/buttons.bootstrap5.min.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('vendors/css/tables/datatable/rowGroup.bootstrap5.min.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('vendors/css/pickers/flatpickr/flatpickr.min.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap-extended.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/colors.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/components.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/themes/dark-layout.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/themes/bordered-layout.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/themes/semi-dark-layout.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/core/menu/menu-types/vertical-menu.css') }}">
+    
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
+        <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    </head>
 
 
 <body class="vertical-layout vertical-menu-modern  navbar-floating footer-static  " data-open="click" data-menu="vertical-menu-modern" data-col="">
@@ -198,10 +204,24 @@
     <p class="clearfix mb-0"><span class="float-md-start d-block d-md-inline-block mt-25">COPYRIGHT &copy; 2022<a class="ms-25" href="https://investigacionctgi.com/" target="_blank">GIAITEQ</a><span class="d-none d-sm-inline-block">, SENNOVA CTGI</span></span></p>
 </footer>
 <button class="btn btn-primary btn-icon scroll-top" type="button"><i data-feather="arrow-up"></i></button>
-<script src="{{asset('vendors/js/vendors.min.js')}}"></script>
-<script src="{{asset('js/core/app-menu.js')}}"></script>
-<script src="{{asset('js/core/app.js')}}"></script>
-<script src="{{asset('js/scripts/forms/form-tooltip-valid.js')}}"></script>
+<script src="{{ asset('vendors/js/vendors.min.js') }}"></script>
+<script src="{{ asset('vendors/js/tables/datatable/jquery.dataTables.min.js') }}"></script>
+<script src="{{ asset('vendors/js/tables/datatable/dataTables.bootstrap5.min.js') }}"></script>
+<script src="{{ asset('vendors/js/tables/datatable/dataTables.responsive.min.js') }}"></script>
+<script src="{{ asset('vendors/js/tables/datatable/responsive.bootstrap5.min.js') }}"></script>
+<script src="{{ asset('vendors/js/tables/datatable/datatables.checkboxes.min.js') }}"></script>
+<script src="{{ asset('vendors/js/tables/datatable/datatables.buttons.min.js') }}"></script>
+<script src="{{ asset('vendors/js/tables/datatable/jszip.min.js') }}"></script>
+<script src="{{ asset('vendors/js/tables/datatable/pdfmake.min.js') }}"></script>
+<script src="{{ asset('vendors/js/tables/datatable/vfs_fonts.js') }}"></script>
+<script src="{{ asset('vendors/js/tables/datatable/buttons.html5.min.js') }}"></script>
+<script src="{{ asset('vendors/js/tables/datatable/buttons.print.min.js') }}"></script>
+<script src="{{ asset('vendors/js/tables/datatable/dataTables.rowGroup.min.js') }}"></script>
+<script src="{{ asset('vendors/js/pickers/flatpickr/flatpickr.min.js') }}"></script>
+<script src="{{ asset('js/core/app-menu.js') }}"></script>
+<script src="{{ asset('js/core/app.js') }}"></script>
+<script src="{{ asset('js/scripts/forms/form-tooltip-valid.js') }}"></script>
+<script src="{{ asset('js/scripts/tables/table-datatables-basic.js') }}"></script>
 <script>
     $(window).on('load', function() {
         if (feather) {

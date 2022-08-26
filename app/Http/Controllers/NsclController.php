@@ -90,12 +90,22 @@ class NsclController extends Controller
 
         $instancianscl -> documento = $ruta;
         $instancianscl -> documento_url = $ruta;
-
+        
         $instancianscl -> mesa_sectorial_id = $nscl -> mesa_sectorial;
         $instancianscl -> estado_producto_id = $nscl -> estado_producto;
         $instancianscl -> centro_formacion_id = $nscl -> centro_formacion;
         $instancianscl -> categoria_id = $nscl -> categoria;
         $instancianscl -> save();
+        
+
+        if (asset($ruta)){
+            $ruta = App\nscl::FindOrFail($id);
+            return view('Nscl/update', compact('ruta'));
+
+        };
+
+        // if isset(request->){} para el pdf
+        
 
         return redirect('Nscl/view')->with('hecho', 'actualizado');
 

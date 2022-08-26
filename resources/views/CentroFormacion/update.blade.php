@@ -30,10 +30,9 @@
                                     <div class="mb-1">
                                         <label class="form-label" for="regional_id">Regional: </label>
                                         <select name="regional_id" id="regional_id"  class="form-control" required>
-                                            <option value="">Seleccione un regional</option>
                                             @foreach ($inforegional as $regional)
                                             
-                                           <option value="{{$regional->id}}">{{$regional->nombre_region}}</option>
+                                            <option value="{{$regional->id}}" @if ($regional->id == $updatecentrof->regional_id) selected @endif>{{$regional->nombre_region}}</option>
                                             @endforeach
                                         </select>
                                         <div class="invalid-tooltip">El "Regional" es Obligatorio.</div>

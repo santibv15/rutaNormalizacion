@@ -87,9 +87,8 @@
                             <div class="mb-1">
                                 <label class="form-label" for="mesa_sectorial">Mesa sectorial: </label>
                                 <select name="mesa_sectorial" id="mesa_sectorial"  class="form-control" required>
-                                    <option value="">seleccione una mesa</option>
                                     @foreach ($infomesa as $mesa)
-                                   <option value="{{$mesa->id}}">{{$mesa->nombre_sector}}</option>
+                                   <option value="{{$mesa->id}}"  @if ($mesa->id == $updatenscl->mesa_sectorial_id) selected @endif>{{$mesa->nombre_sector}}</option>
                                     @endforeach
                                 </select>
                                 <div class="invalid-tooltip">El "Mesa sectorial" es Obligatorio.</div>
@@ -100,9 +99,9 @@
                             <div class="mb-1">
                                 <label class="form-label" for="estado_producto">Estado Producto: </label>
                                 <select name="estado_producto" id="estado_producto"  class="form-control" required>
-                                    <option value="">seleccione estado del producto</option>
+ 
                                     @foreach ($infoestadop as $estadop)
-                                    <option value="{{$estadop->id}}">{{$estadop->tipo_estado}}</option>
+                                    <option value="{{$estadop->id}}"  @if ($estadop->id == $updatenscl->estado_producto_id) selected @endif>{{$estadop->tipo_estado}}</option>
                                     @endforeach
                                 </select>
                                 <div class="invalid-tooltip">El "Estado producto" es Obligatorio.</div>
@@ -113,9 +112,8 @@
                             <div class="mb-1">
                                 <label class="form-label" for="centro_formacion">Centro Formacion: </label>
                                 <select name="centro_formacion" id="centro_formacion"  class="form-control" required>
-                                    <option value="">seleccione un centro</option>
                                     @foreach ($infocentrof as $centrof)
-                                    <option value="{{$centrof->id}}">{{$centrof->nombre}}</option>
+                                    <option value="{{$centrof->id}}" @if ($centrof->id == $updatenscl->centro_formacion_id) selected @endif>{{$centrof->nombre}}</option>
                                     @endforeach
                                 </select>
                                 <div class="invalid-tooltip">El "Centro formacion" es Obligatorio.</div>
@@ -128,7 +126,7 @@
                                 <select name="categoria" id="categoria"  class="form-control" required>
                                     <option value="">seleccione un categoria</option>
                                     @foreach ($infocategoria as $categoria)
-                                    <option value="{{$categoria->id}}">{{$categoria->tipo_categoria}}</option>
+                                    <option value="{{$categoria->id}}" @if ($categoria->id == $updatenscl->categoria_id) selected @endif>{{$categoria->tipo_categoria}}</option>
                                     @endforeach
                                 </select>
                                 <div class="invalid-tooltip">El "Categoria" es Obligatorio.</div>
@@ -137,8 +135,8 @@
 
                         <div class="col-lg-6 col-md-12 mb-1 mb-sm-0">
                             <label for="documento" class="form-label">PDF:</label>
-                            <input class="form-control" name="documento" type="file" id="documento"  accept=".pdf" required />
-                            <div class="invalid-tooltip">El "PDF" es Obligatorio.</div>
+                            <input class="form-control" name="documento" type="file" id="documento"  accept=".pdf"   />
+                        
                         </div>
                       
                     

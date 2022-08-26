@@ -38,6 +38,7 @@ class CentrofController extends Controller
     {
         $updatecentrof = App\centro_formacion::FindOrFail($id);
         $inforegional = App\regionale::All();
+
         
         return view('CentroFormacion/update', compact('updatecentrof','inforegional'));
 

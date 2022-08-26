@@ -51,6 +51,25 @@
 
 @include('layouts.Footer')
 <script>
+  function borrar(id){
+    swal({
+      title: "¿seguro que desea eliminar",
+      text: "El registro eliminado no se podra recuperar",
+      icon: "warning"
+      buttons: true,
+      dangerMode: true,
+    })
+    .then((willDelete)=>{
+      if (willDelete){
+        var url2 ='{{route('DeleteRegional','id')}}';
+            url2 = url2.replace('id', id);
+          location.href=url2;
+      }else{
+        swal("El registro no será borrado");
+      }
+    });
+  }
+
 $(function () {
   'use strict';
 
@@ -85,9 +104,15 @@ $(function () {
         {
           // Actions
           targets: -1,
-          title: 'Actions',
           orderable: false,
           render: function (data, type, full, meta) {
+
+            var id = full ["id"];
+            var url = '{{route('UpdateRegional', 'id')}}';
+            url = url.replace('id', id);
+            var url2= '{{route('DeleteRegional','id')}}';
+            url2 = url2.replace('id', id);
+
             return (
               '<div class="d-inline-flex">' +
               '<a class="pe-1 dropdown-toggle hide-arrow text-primary" data-bs-toggle="dropdown">' +

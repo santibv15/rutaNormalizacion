@@ -22,6 +22,14 @@ class MesaController extends Controller
         return view('MesaSectorial/view', compact('objetoretornado'));
     }
 
+
+    public function resuljson(){
+        $verp =  App\mesa_sectorial::All();
+        $datos = array('data' => $verp);
+        return $datos;
+    }
+
+
     public function UpdateMesa($id)
     {
         $updatemesa = App\mesa_sectorial::FindOrFail($id);

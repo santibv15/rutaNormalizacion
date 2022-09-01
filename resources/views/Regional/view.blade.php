@@ -2,7 +2,6 @@
 
 @section('contenido')
 
-<div class="app-content content ">
     <div class="content-overlay"></div>
     <div class="header-navbar-shadow"></div>
     <div class="content-wrapper container-xxl p-0">
@@ -47,28 +46,27 @@
 
         </div>
     </div>
-</div>
 
 @include('layouts.Footer')
 <script>
-  function borrar(id){
-    swal({
-      title: "¿seguro que desea eliminar",
-      text: "El registro eliminado no se podra recuperar",
-      icon: "warning"
-      buttons: true,
-      dangerMode: true,
-    })
-    .then((willDelete)=>{
-      if (willDelete){
-        var url2 ='{{route('DeleteRegional','id')}}';
-            url2 = url2.replace('id', id);
-          location.href=url2;
-      }else{
-        swal("El registro no será borrado");
-      }
-    });
-  }
+  // function borrar(id){
+  //   swal({
+  //     title: "¿seguro que desea eliminar",
+  //     text: "El registro eliminado no se podra recuperar",
+  //     icon: "warning"
+  //     buttons: true,
+  //     dangerMode: true,
+  //   })
+  //   .then((willDelete)=>{
+  //     if (willDelete){
+  //       var url2 ='{{route('DeleteRegional','id')}}';
+  //           url2 = url2.replace('id', id);
+  //         location.href=url2;
+  //     }else{
+  //       swal("El registro no será borrado");
+  //     }
+  //   });
+  // }
 
 $(function () {
   'use strict';
@@ -86,7 +84,7 @@ $(function () {
 
   if (dt_basic_table.length) {
     var dt_basic = dt_basic_table.DataTable({
-      ajax: '{{ route('VerlistaJ') }}',
+      ajax: '{{ route('listaRegional') }}',
       columns: [
             { data: 'id' },
             { data: 'nombre_region' },
@@ -107,11 +105,11 @@ $(function () {
           orderable: false,
           render: function (data, type, full, meta) {
 
-            var id = full ["id"];
-            var url = '{{route('UpdateRegional', 'id')}}';
-            url = url.replace('id', id);
-            var url2= '{{route('DeleteRegional','id')}}';
-            url2 = url2.replace('id', id);
+            // var id = full ['id'];
+            // var url = '{{route('UpdateRegional', 'id')}}';
+            // url = url.replace('id', id);
+            // var url2= '{{route('DeleteRegional','id')}}';
+            // url2 = url2.replace('id', id);
 
             return (
               '<div class="d-inline-flex">' +

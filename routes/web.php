@@ -55,6 +55,9 @@ Route::get('MesaSectorial/insert', function (){
     return view('MesaSectorial/insert');
 })->name('insertmesa');
 //insert de mesa
+
+Route::get('MesaSectorial/listJson','MesaController@resuljson')->name('listaMesa');
+
 Route::post('MesaSectorial/insert', 'MesaController@InsertMesa')->name('InsertMesa');
 
 Route::get('MesaSectorial/view', 'MesaController@ViewMesa')->name('ViewMesa');
@@ -71,7 +74,8 @@ Route::get('Regional/insert', function(){
     return view('Regional/insert');
 })->name('insertregional');
 
-Route::get('Regional/listJson','RegionalController@resuljson')->name('VerlistaJ');
+Route::get('Regional/listJson','RegionalController@resuljson')->name('listaRegional');
+
 Route::post('Regional/insert', 'RegionalController@InsertRegional')->name('InsertRegional');
 
 Route::get('Regional/view', 'RegionalController@ViewRegional')->name('ViewRegional');
@@ -87,6 +91,8 @@ Route::get('Regional/Delete/{id}', 'RegionalController@DeleteRegional')->name('D
 #endregion
 
 #region Centro de formacion
+
+Route::get('CentroFormacion/listJson','CentrofController@resuljson')->name('listaCentrof');
 
 Route::get('CentroFormacion/insert', 'CentrofController@ViewInsertCentrof')->name('ViewInsertCentrof');
 

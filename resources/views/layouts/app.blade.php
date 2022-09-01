@@ -189,10 +189,10 @@
     </div>
 
     {{-- HASTA AQUI --}}
-
-
+    <div class="app-content content ">
+        @yield('contenido')
+    </div>
       
-      @yield('contenido')
 
 
       

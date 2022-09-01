@@ -33,6 +33,12 @@ class CentrofController extends Controller
         return view('CentroFormacion/view', compact('objetoretornado'));
     }
 
+    public function resuljson(){
+        $verp =  App\centro_formacion::All();
+        $datos = array('data' => $verp);
+        return $datos;
+    }
+
 
     public function UpdateCentrof($id)
     {

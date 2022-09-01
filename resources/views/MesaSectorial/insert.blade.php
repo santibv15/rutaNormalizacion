@@ -4,6 +4,8 @@
 
 
 <section id="basic-input">
+
+    
     <form action="{{Route('InsertMesa')}}" method="POST" class="needs-validation"  novalidate>
         @csrf
     <div class="row">

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+{{-- @extends('layouts.app')
 
 @section('contenido')
 
@@ -32,14 +32,6 @@
             <a href="{{Route('DeleteCentrof', $centrof->id)}}"> <i class='bx bxs-message-square-x'></i></a>
             <a href="{{Route('UpdateCentrof', $centrof->id)}}"><i class='bx bx-rotate-right'></i></a> 
              {{-- <i class='bx bxs-bullseye'></i> --}}
-           </td>
-     </tr>
-     
-     @endforeach
-   </tbody>
- </table>
- @include('layouts.Footer')
-@endsection
 
 
 
@@ -59,7 +51,8 @@
 
 
 
-{{-- @extends('layouts.app')
+
+@extends('layouts.app')
 
 @section('contenido')
 
@@ -301,4 +294,4 @@ $(function () {
 });
 
 </script>
-@endsection --}}
+@endsection

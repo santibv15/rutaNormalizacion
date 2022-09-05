@@ -23,6 +23,13 @@ class CategoriaController extends Controller
         return view('Categoria/view', compact('objetoretornado'));
     }
 
+    public function resuljson(){
+        $verp =  App\categoria::All();
+        $datos = array('data' => $verp);
+        return $datos;
+    }
+
+
     public function UpdateCategoria($id)
     {
         $updatecategoria = App\categoria::FindOrFail($id);

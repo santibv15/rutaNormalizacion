@@ -34,7 +34,10 @@ class CentrofController extends Controller
     }
 
     public function resuljson(){
-        $verp =  App\centro_formacion::All();
+        $verp =  DB::table('centro_formacions')
+        ->join('regionales', 'regionales.id', '=', 'centro_formacions.regional_id')
+        ->select('centro_formacions.*', 'regionales.nombre_region', 'Centro_formacions.nombre')
+        ->get();
         $datos = array('data' => $verp);
         return $datos;
     }

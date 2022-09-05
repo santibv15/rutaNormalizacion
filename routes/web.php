@@ -20,6 +20,9 @@ Route::get('EstadoProducto/insert', function(){
     return view('EstadoProducto/insert');
 })->name('insertestadop');
 
+
+Route::get('EstadoProducto/listJson','EstadopController@resuljson')->name('listaEstadop');
+
 Route::post ('EstadoProducto/insert', 'EstadopController@InsertEstadop')->name('InsertEstadoP');
 
 Route::get ('EstadoProducto/view', 'EstadopController@ViewEstadop')->name('ViewEstadoP');
@@ -36,6 +39,8 @@ Route::get('EstadoProducto/delete/{id}','EstadopController@DeleteEstadop')->name
 Route:: get('Categoria/insert', function(){
     return view('Categoria/insert');
 })->name('insertcategoria');
+
+Route::get('Categoria/listJson','CategoriaController@resuljson')->name('listaCategoria');
 
 Route::post('Categoria/insert', 'CategoriaController@InsertCategoria')->name('InsertCategoria');
 

@@ -21,6 +21,14 @@ class EstadopController extends Controller
         return view('EstadoProducto/view', compact('objetoretornado'));
     }
 
+    public function resuljson(){
+        $verp =  App\estado_producto::All();
+        $datos = array('data' => $verp);
+        return $datos;
+    }
+
+
+
     public function UpdateEstadop($id)
     {
         $updateestadop = App\Estado_Producto::FindOrFail($id);

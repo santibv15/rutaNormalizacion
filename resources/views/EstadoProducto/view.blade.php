@@ -48,25 +48,16 @@
     </div>
 
 @include('layouts.Footer')
+
 <script>
-  // function borrar(id){
-  //   swal({
-  //     title: "¿seguro que desea eliminar",
-  //     text: "El registro eliminado no se podra recuperar",
-  //     icon: "warning"
-  //     buttons: true,
-  //     dangerMode: true,
-  //   })
-  //   .then((willDelete)=>{
-  //     if (willDelete){
-  //       var url2 ='{{route('DeleteRegional','id')}}';
-  //           url2 = url2.replace('id', id);
-  //         location.href=url2;
-  //     }else{
-  //       swal("El registro no será borrado");
-  //     }
-  //   });
-  // }
+  function borrar(id) {
+    var url2 ='{{route('DeleteEstadoP','id')}}';
+    url2 = url2.replace('id', id);
+    location.href=url2;
+  }
+</script>
+<script>
+
 
 $(function () {
   'use strict';
@@ -106,11 +97,11 @@ $(function () {
           orderable: false,
           render: function (data, type, full, meta) {
 
-            // var id = full ['id'];
-            // var url = '{{route('UpdateRegional', 'id')}}';
-            // url = url.replace('id', id);
-            // var url2= '{{route('DeleteRegional','id')}}';
-            // url2 = url2.replace('id', id);
+            var id = full ['id'];
+            var url = '{{route('UpdateEstadoP', 'id')}}';
+            url = url.replace('id', id);
+            var url2= '{{route('DeleteEstadoP','id')}}';
+            url2 = url2.replace('id', id);
 
             return (
               '<div class="d-inline-flex">' +
@@ -121,12 +112,12 @@ $(function () {
               '<a href="javascript:;" class="dropdown-item">' +
               feather.icons['file-text'].toSvg({ class: 'font-small-4 me-50' }) +
               'Detalles</a>' +
-              '<a href="javascript:;" class="dropdown-item delete-record">' +
+              '<a onclick="borrar('+id+')" class="dropdown-item delete-record">' +
               feather.icons['trash-2'].toSvg({ class: 'font-small-4 me-50' }) +
               'Borrar</a>' +
               '</div>' +
               '</div>' +
-              '<a href="javascript:;" class="item-edit">' +
+              '<a href="'+url+'" class="item-edit">' +
               feather.icons['edit'].toSvg({ class: 'font-small-4' }) +
               '</a>'
             );
@@ -245,49 +236,3 @@ $(function () {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-{{-- @extends('layouts.app')
-
-@section('contenido')
-
-<div class="ui success mesagge">
-   <i class="close icon"></i>
-   <div class="header">
-      {{session('hecho')}}
-   </div>
-</div>
-
-<table class="table">
-   <thead>
-     <tr>
-        <th scope="col">id</th>
-       <th scope="col">tip de estado</th>
-       <th scope="col">opciones</th>
-     </tr>
-   </thead>
-
-
-   <tbody>
-      @foreach ($objetoretornado as $estadop)
-          
-      
-     <tr>
-        <td>{{$estadop->id}}</td>
-       <td>{{$estadop->tipo_estado}}</td>
-       
-       <td>
-        <a href="{{Route('DeleteEstadoP', $estadop)}}"> <i class='bx bxs-message-square-x'></i></a>
-        <a href="{{route('UpdateEstadoP', $estadop)}}"><i class='bx bx-rotate-right'></i></a> 
-         {{-- <i class='bx bxs-bullseye'></i> --}}
-   

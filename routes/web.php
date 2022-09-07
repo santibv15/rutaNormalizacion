@@ -116,6 +116,8 @@ Route::get('CentroFormacion/Delete/{id}', 'CentrofController@DeleteCentrof')->na
 
 #region NSCL
 
+Route::get('Nscl/listJson','NsclController@resuljson')->name('listaNscl');
+
 Route::get('Nscl/insert', 'NsclController@ViewInsertNscl')->name('ViewInsertNscl');
 
 Route::post('Nscl/insert', 'NsclController@InsertNscl')->name('InsertNscl');

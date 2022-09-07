@@ -50,24 +50,14 @@
 
 @include('layouts.Footer')
 <script>
-  // function borrar(id){
-  //   swal({
-  //     title: "¿seguro que desea eliminar",
-  //     text: "El registro eliminado no se podra recuperar",
-  //     icon: "warning"
-  //     buttons: true,
-  //     dangerMode: true,
-  //   })
-  //   .then((willDelete)=>{
-  //     if (willDelete){
-  //       var url2 ='{{route('DeleteRegional','id')}}';
-  //           url2 = url2.replace('id', id);
-  //         location.href=url2;
-  //     }else{
-  //       swal("El registro no será borrado");
-  //     }
-  //   });
-  // }
+  function borrar(id) {
+    var url2 ='{{route('DeleteMesa','id')}}';
+    url2 = url2.replace('id', id);
+    location.href=url2;
+  }
+</script>
+<script>
+
 
 $(function () {
   'use strict';
@@ -108,9 +98,9 @@ $(function () {
           render: function (data, type, full, meta) {
 
             var id = full ['id'];
-            var url = '{{route('UpdateRegional', 'id')}}';
+            var url = '{{route('UpdateMesa', 'id')}}';
             url = url.replace('id', id);
-            var url2= '{{route('DeleteRegional','id')}}';
+            var url2= '{{route('DeleteMesa','id')}}';
             url2 = url2.replace('id', id);
 
             return (
@@ -122,12 +112,12 @@ $(function () {
               '<a href="javascript:;" class="dropdown-item">' +
               feather.icons['file-text'].toSvg({ class: 'font-small-4 me-50' }) +
               'Detalles</a>' +
-              '<a href="javascript:;" class="dropdown-item delete-record">' +
+              '<a onclick="borrar('+id+')" class="dropdown-item delete-record">' +
               feather.icons['trash-2'].toSvg({ class: 'font-small-4 me-50' }) +
               'Borrar</a>' +
               '</div>' +
               '</div>' +
-              '<a href="javascript:;" class="item-edit">' +
+              '<a href="'+url+'" class="item-edit">' +
               feather.icons['edit'].toSvg({ class: 'font-small-4' }) +
               '</a>'
             );

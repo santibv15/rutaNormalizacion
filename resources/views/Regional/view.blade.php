@@ -54,7 +54,11 @@
     url2 = url2.replace('id', id);
     location.href=url2;
   }
+
+  
 </script>
+
+
 <script>
   // function borrar(id){
   //   swal({

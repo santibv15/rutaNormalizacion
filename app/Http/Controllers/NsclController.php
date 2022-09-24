@@ -32,8 +32,8 @@ class NsclController extends Controller
         $instancianscl -> fecha_aprobacion = $nscl -> fecha_aprobacion;
         $instancianscl -> n_aprobacion = $nscl -> n_aprobacion;
 
-        $instancianscl -> documento = $ruta;
-        $instancianscl -> documento_url = $ruta;
+        $instancianscl -> documento = 'Storage/' . $ruta;
+        $instancianscl -> documento_url = 'Storage/' . $ruta;
 
         $instancianscl -> mesa_sectorial_id = $nscl -> mesa_sectorial;
         $instancianscl -> estado_producto_id = $nscl -> estado_producto;
@@ -60,6 +60,18 @@ class NsclController extends Controller
         return view('Nscl/view', compact('objetoretornado'));
     }
 
+    public function resuljson(){
+        $verp = DB::table('nscls')
+        ->join('mesa_sectorials', 'mesa_sectorials.id', '=', 'nscls.mesa_sectorial_id')
+        ->join('estado_productos', 'estado_productos.id','=','nscls.estado_producto_id')
+        ->join('centro_formacions', 'centro_formacions.id','=','nscls.centro_formacion_id')
+        ->join('categorias', 'categorias.id','=','nscls.categoria_id')
+        ->select('nscls.*','nscls.titulo', 'mesa_sectorials.nombre_sector', 'estado_productos.tipo_estado'
+        , 'centro_formacions.nombre', 'categorias.tipo_categoria')
+        ->get();
+        $datos = array('data' => $verp);
+        return $datos;
+    }
 
     public function UpdateNscl($id)
     {
@@ -98,11 +110,11 @@ class NsclController extends Controller
         $instancianscl -> save();
         
 
-        if (asset($ruta)){
-            $ruta = App\nscl::FindOrFail($id);
-            return view('Nscl/update', compact('ruta'));
+        // if (asset($ruta)){
+        //     $ruta = App\nscl::FindOrFail($id);
+        //     return view('Nscl/update', compact('ruta'));
 
-        };
+        // };
 
         // if isset(request->){} para el pdf
         

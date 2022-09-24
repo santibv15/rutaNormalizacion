@@ -118,8 +118,8 @@ $(function () {
           render: function (data, type, full, meta) {
 
             var id = full ['id'];
-            // var url = '{{route('UpdateRegional', 'id')}}';
-            // url = url.replace('id', id);
+            var url = '{{route('UpdateRegional', 'id')}}';
+            url = url.replace('id', id);
             var url2= '{{route('DeleteRegional','id')}}';
             url2 = url2.replace('id', id);
 
@@ -137,7 +137,7 @@ $(function () {
               'Borrar</a>' +
               '</div>' +
               '</div>' +
-              '<a href="javascript:;" class="item-edit">' +
+              '<a href="'+url+'" class="item-edit">' +
               feather.icons['edit'].toSvg({ class: 'font-small-4' }) +
               '</a>'
             );

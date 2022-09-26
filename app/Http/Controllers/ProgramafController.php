@@ -50,16 +50,7 @@ class ProgramafController extends Controller
         
     }
 
-    public function ViewDetallePrograma($id)
-    {
-        $detalleprograma = DB::table('programa_formacions')
-        ->join('tipo_programas', 'tipo_programas.id', '=', 'programa_formacions.tipo_programa_id')
-        ->join('campo_ocupacionals', 'campo_ocupacionals.id','=','programa_formacions.campo_ocupacional_id')
-        ->select('programa_formacions.*','programa_formacions.denominacion_prog', 'tipo_programas.nombre_tipo_prog', 'campo_ocupacionals.nombre_campo_ocu')
-        ->get();
 
-        return view('ProgramaFormacion/detalle', compact('detalleprograma'));
-    }
 
     public function resuljson(){
         $verp = DB::table('programa_formacions')

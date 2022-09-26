@@ -221,3 +221,11 @@ Route::get('ProgramaFormacion/Delete/{id}', 'ProgramafController@DeleteProgramaf
 Route::get('ProgramaFormacion/detalle/{id}', 'ProgramafController@ViewDetallePrograma')->name('ViewDetallePrograma');
 
 #endregion
+
+#region  programas y normas
+
+Route::get('ProgramaFormacion/detalle/{id}', 'Nsclhasprograma@ViewDetallePrograma')->name('ViewDetallePrograma');
+
+Route::post('ProgramaFormacion/detalle', 'Nsclhasprograma@AgregarNorma')->name('AgregarNorma');
+
+#endregion

@@ -24,6 +24,7 @@
     <script src="{{ asset('js/core/app.js') }}"></script>
     <script src="{{ asset('js/scripts/forms/form-tooltip-valid.js') }}"></script>
     <script src="{{ asset('js/alerta/sweetalert.min.js') }}"></script>
+    <script src="{{ asset('js/funciones/agregar.js') }}"></script>
     
     <script>
         $(window).on('load', function() {

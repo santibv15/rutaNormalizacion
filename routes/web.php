@@ -130,5 +130,93 @@ Route::post('Nscl/update', 'NsclController@UpdateBdNscl')->name('UpdateBdNscl');
 
 Route::get('Nscl/Delete/{id}', 'NsclController@DeleteNscl')->name('DeleteNscl');
 
-//Route::get('')
+
+#endregion
+
+
+
+
+#region TIPOPROGRAMA
+
+Route::get('TipoPrograma/insert', function(){
+    return view('TipoPrograma/insert');
+})->name('inserttipopro');
+
+Route::get('TipoPrograma/listJson','TipoProController@resuljson')->name('listaTipoPro');
+
+Route::post('TipoPrograma/insert', 'TipoProController@InsertTipoPro')->name('InsertTipoPro');
+
+Route::get('TipoPrograma/view', 'TipoProController@ViewTipoPro')->name('ViewTipoPro');
+
+Route::get('TipoPrograma/update/{id}', 'TipoProController@UpdateTipoPro')->name('UpdateTipoPro');
+
+Route::post('TipoPrograma/update', 'TipoProController@UpdateBdTipoPro')->name('UpdateBdTipoPro');
+
+Route::get('TipoPrograma/Delete/{id}', 'TipoProController@DeleteTipoPro')->name('DeleteTipoPro');
+
+
+#endregion
+
+
+#region CAMPO OCUPACIONAL
+
+Route::get('CampoOcupacional/insert', function(){
+    return view('CampoOcupacional/insert');
+})->name('insertcampoocu');
+
+Route::get('CampoOcupacional/listJson','CampoOcuController@resuljson')->name('listaCampoOcu');
+
+Route::post('CampoOcupacional/insert', 'CampoOcuController@InsertCampoOcu')->name('InsertCampoOcu');
+
+Route::get('CampoOcupacional/view', 'CampoOcuController@ViewCampoOcu')->name('ViewCampoOcu');
+
+Route::get('CampoOcupacional/update/{id}', 'CampoOcuController@UpdateCampoOcu')->name('UpdateCampoOcu');
+
+Route::post('CampoOcupacional/update', 'CampoOcuController@UpdateBdCampoOcu')->name('UpdateBdCampoOcu');
+
+Route::get('CampoOcupacional/Delete/{id}', 'CampoOcuController@DeleteCampoOcu')->name('DeleteCampoOcu');
+
+
+#endregion
+
+#region SECTORES
+
+Route::get('Sectores/insert', function(){
+    return view('Sectores/insert');
+})->name('insertsector');
+
+Route::get('Sectores/listJson','SectorController@resuljson')->name('listaSector');
+
+Route::post('Sectores/insert', 'SectorController@InsertSector')->name('InsertSector');
+
+Route::get('Sectores/view', 'SectorController@ViewSector')->name('ViewSector');
+
+Route::get('Sectores/update/{id}', 'SectorController@UpdateSector')->name('UpdateSector');
+
+Route::post('Sectores/update', 'SectorController@UpdateBdSector')->name('UpdateBdSector');
+
+Route::get('Sectores/Delete/{id}', 'SectorController@DeleteSector')->name('DeleteSector');
+
+
+#endregion
+
+
+
+#region PROGRAMA FORMACION
+
+Route::get('ProgramaFormacion/listJson','ProgramafController@resuljson')->name('listaProgramaf');
+
+Route::get('ProgramaFormacion/insert', 'ProgramafController@ViewInsertProgramaf')->name('ViewInsertProgramaf');
+
+Route::post('ProgramaFormacion/insert', 'ProgramafController@InsertProgramaf')->name('InsertProgramaf');
+
+Route::get('ProgramaFormacion/view', 'ProgramafController@ViewProgramaf')->name('ViewProgramaf');
+
+ Route::get('ProgramaFormacion/update/{id}', 'ProgramafController@UpdateProgramaf')->name('UpdateProgramaf');
+
+Route::post('ProgramaFormacion/update', 'ProgramafController@UpdateBdProgramaf')->name('UpdateBdProgramaf');
+
+Route::get('ProgramaFormacion/Delete/{id}', 'ProgramafController@DeleteProgramaf')->name('DeleteProgramaf');
+
+
 #endregion

@@ -184,6 +184,43 @@
                   </li>
               </ul>
           </li>
+
+          <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="file-text"></i><span class="menu-title text-truncate" data-i18n="Pages">Tipo Programa</span></a>
+            <ul class="menu-content">
+                <li><a class="d-flex align-items-center" href="{{ Route('ViewTipoPro')}}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Profile"> listado de tipos de programas</span></a>
+                </li>
+                <li><a class="d-flex align-items-center" href="{{ Route('InsertTipoPro')}}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="FAQ">Registrar tipo de programas</span></a>
+                </li>
+            </ul>
+        </li>
+
+        <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="file-text"></i><span class="menu-title text-truncate" data-i18n="Pages">Campo Ocupacional</span></a>
+            <ul class="menu-content">
+                <li><a class="d-flex align-items-center" href="{{ Route('ViewCampoOcu')}}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Profile"> listado de Campos Ocupacionales</span></a>
+                </li>
+                <li><a class="d-flex align-items-center" href="{{ Route('InsertCampoOcu')}}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="FAQ">Registrar Campo Ocupacional</span></a>
+                </li>
+            </ul>
+        </li>
+
+        <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="file-text"></i><span class="menu-title text-truncate" data-i18n="Pages">Sectores</span></a>
+            <ul class="menu-content">
+                <li><a class="d-flex align-items-center" href="{{ Route('ViewSector')}}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Profile"> listado de Sectores</span></a>
+                </li>
+                <li><a class="d-flex align-items-center" href="{{ Route('InsertSector')}}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="FAQ">Registrar Sectores</span></a>
+                </li>
+            </ul>
+        </li>
+
+        <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="file-text"></i><span class="menu-title text-truncate" data-i18n="Pages">Programa Formacion</span></a>
+            <ul class="menu-content">
+                <li><a class="d-flex align-items-center" href="{{ Route('ViewProgramaf')}}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Profile"> listado de Programas</span></a>
+                </li>
+                <li><a class="d-flex align-items-center" href="{{ Route('InsertProgramaf')}}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="FAQ">Registrar Programa</span></a>
+                </li>
+            </ul>
+        </li>
+
             </ul>
         </div>
     </div>

@@ -218,5 +218,6 @@ Route::post('ProgramaFormacion/update', 'ProgramafController@UpdateBdProgramaf')
 
 Route::get('ProgramaFormacion/Delete/{id}', 'ProgramafController@DeleteProgramaf')->name('DeleteProgramaf');
 
+Route::get('ProgramaFormacion/detalle/{id}', 'ProgramafController@ViewDetallePrograma')->name('ViewDetallePrograma');
 
 #endregion

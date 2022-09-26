@@ -35,11 +35,11 @@
                                         <th>Codigo</th>
                                         <th>Fecha Inicio</th>
                                         <th>Fecha Final</th>
-                                        <th>Etapa Electiva</th>
+                                        {{-- <th>Etapa Electiva</th>
                                         <th>Etapa Productiva</th>
                                         <th>Etapa Total</th>
-                                        <th>Tipo Programa</th>
-                                        <th>Campo Ocupasional</th>
+                                        <th>Tipo Programa</th> 
+                                        <th>Campo Ocupasional</th>--}}
                                        
 
                                         <th>Acciones</th>
@@ -92,11 +92,11 @@ $(function () {
             { data: 'codigo_prog' },
             {data: 'fech_ini_prog'},
             { data:'fech_fin_prog' },
-            {data: 'eta_electiva'},
-            { data: 'eta_productiva' },
-            { data: 'eta_total' },
-            {data: 'nombre_tipo_prog'},
-            {data: 'nombre_campo_ocu'},
+            // {data: 'eta_electiva'},
+            // { data: 'eta_productiva' },
+            // { data: 'eta_total' },
+            // {data: 'nombre_tipo_prog'},
+            // {data: 'nombre_campo_ocu'},
             { data: 'Acciones' },
             
           ],
@@ -120,8 +120,11 @@ $(function () {
             url = url.replace('id', id);
             var url2= '{{route('DeleteProgramaf','id')}}';
             url2 = url2.replace('id', id);
+            var  url3 = '{{route('ViewDetallePrograma', 'id')}}';
+            url3 = url3.replace('id', id);
             var pdf = '{{asset('storage/' . 'documento')}}';
             pdf = pdf.replace('documento', documento);
+
             
            
             return (
@@ -130,7 +133,7 @@ $(function () {
               feather.icons['more-vertical'].toSvg({ class: 'font-small-4' }) +
               '</a>' +
               '<div class="dropdown-menu dropdown-menu-end">' +
-              '<a href="javascript:;" class="dropdown-item">' +
+              '<a href="'+url3+'" class="dropdown-item">' +
               feather.icons['file-text'].toSvg({ class: 'font-small-4 me-50' }) +
               'Detalles</a>' +
 

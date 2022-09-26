@@ -36,6 +36,7 @@
         <link rel="stylesheet" type="text/css" href="{{ asset('css/themes/bordered-layout.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ asset('css/themes/semi-dark-layout.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ asset('css/core/menu/menu-types/vertical-menu.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/core/tablas/detalle.css') }}">
     
         <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
         <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>

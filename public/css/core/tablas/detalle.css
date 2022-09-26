@@ -1,0 +1,19 @@
+.detalles .fila .columna{
+    display:flex ;
+}
+
+.detalles .fila .columna .header, .detalles .fila .columna .contenido{
+    border:1px solid black;
+
+    padding: 10px;
+}
+
+.detalles .fila .columna .header{
+    width:40%;
+    background:rgb(190, 190, 190);
+}
+
+.detalles .fila .columna .contenido{
+    width: 60%;
+
+}

@@ -4,13 +4,14 @@
 
 .detalles .fila .columna .header, .detalles .fila .columna .contenido{
     border:1px solid black;
-
+    font-size: 17px;
     padding: 10px;
 }
 
 .detalles .fila .columna .header{
     width:40%;
-    background:rgb(190, 190, 190);
+    background-color: #ff6719 ;
+    color:white;
 }
 
 .detalles .fila .columna .contenido{

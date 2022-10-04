@@ -35,14 +35,6 @@
                                         <th>Codigo</th>
                                         <th>Version</th>
                                         <th>Mesa</th>
-                                        <th>Estado producto</th>
-                                        <th>Centro Formacion</th>
-                                        <th>Categoria</th>
-                                        <th>Fecha Publicación</th>
-                                        <th>Fecha Revisión</th>
-                                       <th>Fecha Aprobación</th>
-                                       <th>Numero Aprobación</th>
-
                                         <th>Acciones</th>
                                     </tr>
                                 </thead>
@@ -93,13 +85,6 @@ $(function () {
             { data: 'codigo_nscl' },
             {data: 'version'},
             { data:'nombre_sector' },
-            {data: 'tipo_estado'},
-            { data: 'nombre' },
-            { data: 'tipo_categoria' },
-            {data: 'fecha_publicacion'},
-            {data: 'fecha_revision'},
-            {data: 'fecha_aprobacion'},
-            {data: 'n_aprobacion'},
             { data: 'Acciones' },
             
           ],
@@ -123,6 +108,8 @@ $(function () {
             url = url.replace('id', id);
             var url2= '{{route('DeleteNscl','id')}}';
             url2 = url2.replace('id', id);
+            var  url3 = '{{route('ViewDetalleNscl', 'id')}}';
+            url3 = url3.replace('id', id);
             var pdf = '{{asset('storage/' . 'documento')}}';
             pdf = pdf.replace('documento', documento);
             
@@ -133,7 +120,8 @@ $(function () {
               feather.icons['more-vertical'].toSvg({ class: 'font-small-4' }) +
               '</a>' +
               '<div class="dropdown-menu dropdown-menu-end">' +
-              '<a href="javascript:;" class="dropdown-item">' +
+
+              '<a href="'+url3+'" class="dropdown-item">' +
               feather.icons['file-text'].toSvg({ class: 'font-small-4 me-50' }) +
               'Detalles</a>' +
 

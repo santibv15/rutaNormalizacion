@@ -62,8 +62,31 @@
     </div>
     <br>
 
+    <table  class="datatables-basic table">
+        <h3>Normas Asociadas</h3>
+        <br>
+        <thead>
+        
+            <th>codigo norma</th>
+            <th>Titulo</th>
+        </thead>
+        @foreach ($listaagregadas as $agregada)
+        <tbody>
+         
+       
+         <td>{{$agregada->codigo_nscl}}</td>
+         <td>{{$agregada->titulo}}</td>
+        
+         
+        </tbody>
+        @endforeach
+    </table>
+    
+    <br><br><br>
+
 
     <form action="{{route('AgregarNorma')}}" method="POST" class="needs-validation"  novalidate>
+        @csrf
     <div class="row">
         <div class="col-md-12">
             <div class="card">
@@ -137,7 +160,7 @@
 </form>
 
 
-
+<br><br><br>
 
 
 

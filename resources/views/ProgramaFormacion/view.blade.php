@@ -122,8 +122,7 @@ $(function () {
             url2 = url2.replace('id', id);
             var  url3 = '{{route('ViewDetallePrograma', 'id')}}';
             url3 = url3.replace('id', id);
-            var pdf = '{{asset('storage/' . 'documento')}}';
-            pdf = pdf.replace('documento', documento);
+            
 
             
            
@@ -136,10 +135,6 @@ $(function () {
               '<a href="'+url3+'" class="dropdown-item">' +
               feather.icons['file-text'].toSvg({ class: 'font-small-4 me-50' }) +
               'Detalles</a>' +
-
-              '<a href="'+pdf+'" class="dropdown-item">' +
-              feather.icons['file-text'].toSvg({ class: 'font-small-4 me-50' }) +
-              'descargar</a>' +
 
               '<a onclick="borrar('+id+')" class="dropdown-item delete-record">' +
               feather.icons['trash-2'].toSvg({ class: 'font-small-4 me-50' }) +

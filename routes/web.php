@@ -226,6 +226,10 @@ Route::get('ProgramaFormacion/detalle/{id}', 'ProgramafController@ViewDetallePro
 
 Route::get('ProgramaFormacion/detalle/{id}', 'Nsclhasprograma@ViewDetallePrograma')->name('ViewDetallePrograma');
 
+Route::get('Nscl/detalle/{id}', 'Nsclhasprograma@ViewDetalleNscl')->name('ViewDetalleNscl');
+
 Route::post('ProgramaFormacion/detalle', 'Nsclhasprograma@AgregarNorma')->name('AgregarNorma');
+
+Route::post('Nscl/detalle', 'Nsclhasprograma@AgregarPrograma')->name('AgregarPrograma');
 
 #endregion

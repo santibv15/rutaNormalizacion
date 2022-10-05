@@ -22,6 +22,8 @@ function agregarnorma(){
     var kel = kal.options[kal.selectedIndex];
     kel.remove();
 
+    
+
 }
 function dele(button){
     let ele = button.id;
@@ -52,9 +54,7 @@ function agregarprograma(){
     var kel = kal.options[kal.selectedIndex];
     kel.remove();
 
-    if(kal == document.getElementById('$codigounic')){
-
-    }
+    
 
 
 }
@@ -65,18 +65,6 @@ function dele(button){
     row.remove();
 }
 
-
-
-// let nn=0;
-// let n=0;
-// function agregarnorma(){
-// var text = $("#selector option:selected").text();
-// n ++;
-// nn ++;
-// console.log(text);
-// $("#ruta").append("<tr id='n"+[n]+"' value='"+[n]+"'>\
-// <td>"+text+"</td>\
-// <td><button type='button' onclick='dele(this)' id="+nn+" class='btn btn-primary'>X</button></td>\
-// </tr>");
-// }
-
+let obtenerfila = document.getElementById("fila2");
+let elementosfila = obtenerfila.getElementsByTagName("td");
+console.log(elementosfila);

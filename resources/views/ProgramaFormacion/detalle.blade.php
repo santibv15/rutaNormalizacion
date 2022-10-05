@@ -30,22 +30,22 @@
 
         <div class="columna">
             <div class="header">Fecha final: </div>
-            <div class="contenido">{{$programa->fech_ini_prog}}</div>
+            <div class="contenido">{{$programa->fech_fin_prog}}</div>
         </div>
 
         <div class="columna">
             <div class="header">Etapa Electiva: </div>
-            <div class="contenido">{{$programa->eta_electiva}}</div>
+            <div class="contenido">{{$programa->eta_electiva}} meses</div>
         </div>
 
         <div class="columna">
             <div class="header">Etapa productiva: </div>
-            <div class="contenido">{{$programa->eta_productiva}}</div>
+            <div class="contenido">{{$programa->eta_productiva}} meses</div>
         </div>
         
         <div class="columna">
             <div class="header">Etapa Total: </div>
-            <div class="contenido">{{$programa->eta_total}}</div>
+            <div class="contenido">{{$programa->eta_total}} meses</div>
         </div>
 
         <div class="columna">
@@ -71,11 +71,11 @@
             <th>Titulo</th>
         </thead>
         @foreach ($listaagregadas as $agregada)
-        <tbody>
+        <tbody id="fila2">
          
        
-         <td>{{$agregada->codigo_nscl}}</td>
-         <td>{{$agregada->titulo}}</td>
+         <td id="dato">{{$agregada->codigo_nscl}}</td>
+         <td >{{$agregada->titulo}}</td>
         
          
         </tbody>

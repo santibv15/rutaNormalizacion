@@ -25,10 +25,10 @@ class ProgramafController extends Controller
         $instanciaprogramaf -> denominacion_prog = $programaf ->denominacion_prog;
         $instanciaprogramaf -> codigo_prog = $programaf ->codigo_prog;
         $instanciaprogramaf -> fech_ini_prog = $programaf ->fech_ini_prog;
-        $instanciaprogramaf -> fech_fin_prog = $programaf ->fech_fin_prog;
+        $instanciaprogramaf -> fech_fin_prog = date("y-m-d", strtotime($programaf ->fech_ini_prog."+ 7 years"));
         $instanciaprogramaf -> eta_electiva = $programaf ->eta_electiva;
         $instanciaprogramaf -> eta_productiva = $programaf ->eta_productiva;
-        $instanciaprogramaf -> eta_total = $programaf ->eta_total;
+        $instanciaprogramaf -> eta_total = $programaf -> eta_electiva + $programaf ->eta_productiva;
         $instanciaprogramaf -> tipo_programa_id = $programaf ->tipo_programa;
         $instanciaprogramaf -> campo_ocupacional_id = $programaf ->campo_ocupacional;
         $instanciaprogramaf -> save();
@@ -80,10 +80,10 @@ class ProgramafController extends Controller
         $instanciaprogramaf -> denominacion_prog = $programaf ->denominacion_prog;
         $instanciaprogramaf -> codigo_prog = $programaf ->codigo_prog;
         $instanciaprogramaf -> fech_ini_prog = $programaf ->fech_ini_prog;
-        $instanciaprogramaf -> fech_fin_prog = $programaf ->fech_fin_prog;
+        $instanciaprogramaf -> fech_fin_prog = date("y-m-d", strtotime($programaf ->fech_ini_prog."+ 7 years"));
         $instanciaprogramaf -> eta_electiva = $programaf ->eta_electiva;
         $instanciaprogramaf -> eta_productiva = $programaf ->eta_productiva;
-        $instanciaprogramaf -> eta_total = $programaf ->eta_total;
+        $instanciaprogramaf -> eta_total = $programaf -> eta_electiva + $programaf ->eta_productiva;
         $instanciaprogramaf -> tipo_programa_id = $programaf ->tipo_programa;
         $instanciaprogramaf -> campo_ocupacional_id = $programaf ->campo_ocupacional;
         $instanciaprogramaf -> save();

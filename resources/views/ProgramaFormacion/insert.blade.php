@@ -42,20 +42,12 @@
                         </div>
                         
 
-                        <div class="col-xl-4 col-md-6 col-12">
-                            <div class="mb-1">
-                                <label class="form-label" for="fech_fin_prog">Fecha final Programa: </label>
-                                <input type="date" class="form-control" name="fech_fin_prog" id="fech_fin_prog" required />
-                                <div class="invalid-tooltip">El valor "Fecha final" es Obligatorio.</div>
-                            </div>
-                        </div>
-
                        
 
                         <div class="col-xl-4 col-md-6 col-12">
                             <div class="mb-1">
                                 <label class="form-label" for="eta_electiva">Etapa Electiva: </label>
-                                <input type="text" class="form-control" name="eta_electiva" id="eta_electiva"  placeholder="ingrese la etapa electiva (meses)" required/>
+                                <input type="number" class="form-control" name="eta_electiva" id="eta_electiva"  placeholder="ingrese la etapa electiva (meses)" required/>
                                 <div class="invalid-tooltip">El valor "Etapa Electiva" es Obligatorio.</div>
                             </div>
                         </div>
@@ -63,24 +55,10 @@
                         <div class="col-xl-4 col-md-6 col-12">
                             <div class="mb-1">
                                 <label class="form-label" for="eta_productiva">Etapa Productiva: </label>
-                                <input type="text" class="form-control" name="eta_productiva" id="eta_productiva"  placeholder="ingrese la etapa productiva (meses)" required/>
+                                <input type="number" class="form-control" name="eta_productiva" id="eta_productiva"  placeholder="ingrese la etapa productiva (meses)" required/>
                                 <div class="invalid-tooltip">El valor "Etapa Electiva" es Obligatorio.</div>
                             </div>
                         </div>
-
-                        <div class="col-xl-4 col-md-6 col-12">
-                            <div class="mb-1">
-                                <label class="form-label" for="eta_total">Etapa Electiva: </label>
-                                <input type="text" class="form-control" name="eta_total" id="eta_total" value="" required/>
-                                <div class="invalid-tooltip">El valor "Etapa total" es Obligatorio.</div>
-                            </div>
-                        </div>
-
-
-
-
-
-
                         <div class="col-xl-4 col-md-6 col-12">
                             <div class="mb-1">
                                 <label class="form-label" for="tipo_programa">Tipo Programa: </label>

@@ -42,14 +42,6 @@
                             </div>
                         </div>
                         
-                        <div class="col-xl-4 col-md-6 col-12">
-                            <div class="mb-1">
-                                <label class="form-label" for="fech_fin_prog">Fecha Final: </label>
-                                <input type="date" class="form-control" name="fech_fin_prog" id="fech_fin_prog"  value="{{$updateprogramaf->fech_fin_prog}}" required/>
-                                <div class="invalid-tooltip">El "Fecha Final" es Obligatorio.</div>
-                            </div>
-                        </div>
-                        
 
                         <div class="col-xl-4 col-md-6 col-12">
                             <div class="mb-1">
@@ -64,14 +56,6 @@
                                 <label class="form-label" for="eta_productiva">Etapa Productiva: </label>
                                 <input type="number" class="form-control" name="eta_productiva" id="eta_productiva" value="{{$updateprogramaf->eta_productiva}}" required/>
                                 <div class="invalid-tooltip">El "Etapa Productiva" es Obligatorio.</div>
-                            </div>
-                        </div>
-
-                        <div class="col-xl-4 col-md-6 col-12">
-                            <div class="mb-1">
-                                <label class="form-label" for="eta_total">Etapa Total: </label>
-                                <input type="text" class="form-control" name="eta_total" id="eta_total"  value="{{$updateprogramaf->eta_total}}" required/>
-                                <div class="invalid-tooltip">El "Etapa Total" es Obligatorio.</div>
                             </div>
                         </div>
 

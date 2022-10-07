@@ -62,7 +62,7 @@
     </div>
     <br>
 
-    <table  class="datatables-basic table">
+    <table  class="datatables-basic table" id="tablanormas">
         <h3>Normas Asociadas</h3>
         <br>
         <thead>
@@ -71,7 +71,7 @@
             <th>Titulo</th>
         </thead>
         @foreach ($listaagregadas as $agregada)
-        <tbody id="fila2">
+        <tbody>
          
        
          <td id="dato">{{$agregada->codigo_nscl}}</td>

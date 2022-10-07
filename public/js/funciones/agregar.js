@@ -1,6 +1,21 @@
 let nn=0;
 let n=0;
+
+
+let tabla = document.getElementById("tablanormas");
+for (let i = 1, celda; i< tabla.rows.length; i ++){
+    celda = tabla.rows[i].cells[0];
+    console.log(celda.innerHTML);
+}
+
+
+muestracodigo(tablanormas)
+
 function agregarnorma(){
+
+
+    
+
     var text = $("#selector option:selected").text();
     const re= text.split(' ');
     n ++;
@@ -54,6 +69,10 @@ function agregarprograma(){
     var kel = kal.options[kal.selectedIndex];
     kel.remove();
 
+    let tabla = document.getElementById("tablanormas");
+
+
+
     
 
 
@@ -65,6 +84,14 @@ function dele(button){
     row.remove();
 }
 
-let obtenerfila = document.getElementById("fila2");
-let elementosfila = obtenerfila.getElementsByTagName("td");
-console.log(elementosfila);
+// let tabla = document.getElementById("tablanormas");
+
+
+//     for (let i = 1, celda; i< tabla.rows.length; i ++){
+//         celda = tabla.rows[i].cells[0];
+//         console.log(celda.innerHTML);
+//     }
+
+
+// muestracodigo(tablanormas)
+

@@ -2,22 +2,27 @@ let nn=0;
 let n=0;
 
 
-let tabla = document.getElementById("tablanormas");
-for (let i = 1, celda; i< tabla.rows.length; i ++){
-    celda = tabla.rows[i].cells[0];
-    console.log(celda.innerHTML);
-}
-
 
 muestracodigo(tablanormas)
 
 function agregarnorma(){
-
-
-    
+    let tabla = document.getElementById("tablanormas");
 
     var text = $("#selector option:selected").text();
+
+
     const re= text.split(' ');
+    for (let i = 1, celda; i< tabla.rows.length; i ++){
+        celda = tabla.rows[i].cells[0].innerHTML;
+        console.log(tabla.rows[i].cells[0].innerHTML + "=" +re[1]);
+
+        if(celda == re[1]){
+            console.log("son inguales");
+            alert("No se puede registrar la norma , ya ha sido ingresada anteriormente");
+            return;
+        }repetida
+       
+    }
     n ++;
     nn ++;
     let fe = re [0];
@@ -28,10 +33,19 @@ function agregarnorma(){
     <td>"+re[1]+"</td>\
     <td>"+re[2]+"</td>\
     <td><button type='button' onclick='dele(this)' id="+nn+" class='btn btn-primary'>X</button></td>\
-    </tr>");
+    </tr>"); 
+
+
 
     var ar = document.getElementById('n'+[n]).getAttribute('value');
-    const array = [ar];
+const array = [ar];
+
+  
+
+    
+    
+
+    
 
     var kal=document.getElementById('selector');
     var kel = kal.options[kal.selectedIndex];
@@ -49,8 +63,23 @@ function dele(button){
 
 
 function agregarprograma(){
+
+    let tabla2 = document.getElementById("tablaprograma");
     var text = $("#selectordos option:selected").text();
     const re= text.split(' ');
+
+    for (let i = 1, celda; i< tabla2.rows.length; i ++){
+        celda = tabla2.rows[i].cells[0].innerHTML;
+        console.log(tabla2.rows[i].cells[0].innerHTML + "=" +re[1]);
+        
+        if(celda == re[1]){
+            console.log("son inguales");
+            alert("el programa no se puede  registrar, ya ha sido ingresada anteriormente");
+            return;
+        }
+       
+    }
+
     n ++;
     nn ++;
     let fe = re [0];
@@ -68,13 +97,6 @@ function agregarprograma(){
     var kal=document.getElementById('selectordos');
     var kel = kal.options[kal.selectedIndex];
     kel.remove();
-
-    let tabla = document.getElementById("tablanormas");
-
-
-
-    
-
 
 }
 function dele(button){

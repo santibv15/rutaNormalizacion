@@ -69,7 +69,7 @@
         </div>
         @endforeach
         <br><br>
-        <table  class="datatables-basic table">
+        <table  class="datatables-basic table" id="tablaprograma">
             <h3>Normas Asociadas</h3>
             <br>
             <thead>

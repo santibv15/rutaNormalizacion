@@ -106,14 +106,4 @@ function dele(button){
     row.remove();
 }
 
-// let tabla = document.getElementById("tablanormas");
-
-
-//     for (let i = 1, celda; i< tabla.rows.length; i ++){
-//         celda = tabla.rows[i].cells[0];
-//         console.log(celda.innerHTML);
-//     }
-
-
-// muestracodigo(tablanormas)
 

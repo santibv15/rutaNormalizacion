@@ -233,3 +233,33 @@ Route::post('ProgramaFormacion/detalle', 'Nsclhasprograma@AgregarNorma')->name('
 Route::post('Nscl/detalle', 'Nsclhasprograma@AgregarPrograma')->name('AgregarPrograma');
 
 #endregion
+
+
+#region roles
+
+
+Route::get('Roles/insert', function(){
+    return view('Roles/insert');
+})->name('insertrol');
+
+Route::get('Roles/listJson','RolController@resuljson')->name('listaRol');
+
+Route::post('Roles/insert', 'RolController@InsertRol')->name('InsertRol');
+
+Route::get('Roles/view', 'RolController@ViewRol')->name('ViewRol');
+
+Route::get('Roles/update/{id}', 'RolController@UpdateRol')->name('UpdateRol');
+
+Route::post('Roles/update', 'RolController@UpdateBdRol')->name('UpdateBdRol');
+
+Route::get('Roles/Delete/{id}', 'RolController@DeleteRol')->name('DeleteRol');
+
+
+
+
+#endregion
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

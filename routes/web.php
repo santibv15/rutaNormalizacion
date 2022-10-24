@@ -12,13 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth/login');
 });
 
 #region estado producto
-Route::get('EstadoProducto/insert', function(){
-    return view('EstadoProducto/insert');
-})->name('insertestadop');
+Route::get('EstadoProducto/insert', 'EstadopController@ViewInsert')->name('insertestadop');
 
 
 Route::get('EstadoProducto/listJson','EstadopController@resuljson')->name('listaEstadop');

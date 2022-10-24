@@ -6,6 +6,17 @@ use Illuminate\Http\Request;
 use App;
 class EstadopController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    public function ViewInsert(){
+        return view ('EstadoProducto/insert');
+    }
+
+    
+
     public function InsertEstadop (Request $estadop)
     {
         $instanciaestadop = new App\Estado_Producto;

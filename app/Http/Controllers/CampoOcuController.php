@@ -6,6 +6,15 @@ use Illuminate\Http\Request;
 use App;
 class CampoOcuController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    public function ViewInsert(){
+        return view ('CampoOcupacional/insert');
+    }
     public function InsertCampoOcu(Request $campo_ocupacional)
     {
         $instanciacampoocupacional = new App\campo_ocupacional;

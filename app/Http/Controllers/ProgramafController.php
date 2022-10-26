@@ -9,6 +9,10 @@ use App;
 class ProgramafController extends Controller
 {
    
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function ViewInsertProgramaf ()
     {
         $infotipopro = App\tipo_programa::All();

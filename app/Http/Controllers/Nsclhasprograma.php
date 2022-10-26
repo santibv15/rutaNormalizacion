@@ -7,6 +7,10 @@ use Illuminate\Support\Facades\DB;
 use App;
 class Nsclhasprograma extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 
     public function ViewDetallePrograma($id)
     {

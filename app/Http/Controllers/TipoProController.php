@@ -6,6 +6,14 @@ use Illuminate\Http\Request;
 use App;
 class TipoProController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    public function ViewInsert(){
+        return view ('CampoOcupacional/insert');
+    }
     public function InsertTipoPro(Request $tipo_programa)
     {
         $instanciatipopro = new App\tipo_programa;

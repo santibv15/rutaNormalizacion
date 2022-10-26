@@ -7,6 +7,15 @@ use App;
 
 class SectorController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    public function ViewInsert(){
+        return view ('Regional/insert');
+    }
+
     public function InsertSector(Request $sector)
     {
         $instanciasector = new App\sectore;

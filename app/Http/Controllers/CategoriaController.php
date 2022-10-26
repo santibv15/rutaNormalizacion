@@ -7,6 +7,16 @@ use App;
 
 class CategoriaController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    public function ViewInsert(){
+        return view ('Categoria/insert');
+    }
+
     public function InsertCategoria(Request $categoria)
     {
         $instanciacategoria = new App\categoria;

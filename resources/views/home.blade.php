@@ -1,6 +1,7 @@
-@extends('layouts.app')
 
-@section('content')
+
+@extends('layouts.app')
+@section('contenido')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -14,11 +15,14 @@
                         </div>
                     @endif
 
+                    <h1>hola</h1>
                     You are logged in!
                 </div>
             </div>
         </div>
     </div>
 </div>
-@endsection
 @include('layouts.Footer')
+@endsection
+
+

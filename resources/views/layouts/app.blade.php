@@ -1,5 +1,5 @@
 <!doctype html>
-{{-- <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" >
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,8 +19,8 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body>
-    <div id="app">
+<body >
+    <div id="app" style="display: none">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -77,7 +77,7 @@
         </main>
     </div>
 </body>
-</html> --}}
+</html>
 <!DOCTYPE html>
 <html class="loading" lang="en" data-textdirection="ltr">
     <head>
@@ -184,14 +184,20 @@
                     </ul>
                 </li>
                 <li class="nav-item dropdown dropdown-user"><a class="nav-link dropdown-toggle dropdown-user-link" id="dropdown-user" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <div class="user-nav d-sm-flex d-none"><span class="user-name fw-bolder">Nombre Apellido</span><span class="user-status">Coordinador</span></div><span class="avatar"><img class="round" src="{{asset('images/portrait/small/avatar-s-11.jpg')}}" alt="avatar" height="40" width="40"><span class="avatar-status-online"></span></span>
+                        <div class="user-nav d-sm-flex d-none"><span class="user-name fw-bolder">{{auth()->user()->name}}</span><span class="user-status">{{auth()->user()->rol}}</span></div><span class="avatar"><img class="round" src="{{asset('images/portrait/small/avatar-s-11.jpg')}}" alt="avatar" height="40" width="40"><span class="avatar-status-online"></span></span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdown-user">
                         <a class="dropdown-item" href="#"><i class="me-50" data-feather="user"></i> Profile</a>
                         <a class="dropdown-item" href="#"><i class="me-50" data-feather="mail"></i> Inbox</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#"><i class="me-50" data-feather="settings"></i> Settings</a>
-                        <a class="dropdown-item" href="#"><i class="me-50" data-feather="power"></i> Logout</a>
+                        <a class="dropdown-item" href="
+
+
+                        {{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                       <i class="me-50" data-feather="power"></i> Logout</a>
                     </div>
                 </li>
             </ul>

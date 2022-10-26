@@ -34,9 +34,7 @@ Route::get('EstadoProducto/delete/{id}','EstadopController@DeleteEstadop')->name
 
 
 #region categoria
-Route:: get('Categoria/insert', function(){
-    return view('Categoria/insert');
-})->name('insertcategoria');
+Route:: get('Categoria/insert', 'CategoriaController@ViewInsert') ->name('insertcategoria');
 
 Route::get('Categoria/listJson','CategoriaController@resuljson')->name('listaCategoria');
 
@@ -54,9 +52,7 @@ Route::get('Categoria/delete/{id}', 'CategoriaController@DeleteCategoria')->name
 
 #region mesa sectorial
 
-Route::get('MesaSectorial/insert', function (){
-    return view('MesaSectorial/insert');
-})->name('insertmesa');
+Route::get('MesaSectorial/insert', 'MesaController@ViewInsert')->name('insertmesa');
 //insert de mesa
 
 Route::get('MesaSectorial/listJson','MesaController@resuljson')->name('listaMesa');
@@ -73,9 +69,7 @@ Route::get('MesaSectorial/Delete/{id}', 'MesaController@DeleteMesa')->name('Dele
 #endregion
 
 #region de regional
-Route::get('Regional/insert', function(){
-    return view('Regional/insert');
-})->name('insertregional');
+Route::get('Regional/insert', 'RegionalController@ViewInsert')->name('insertregional');
 
 Route::get('Regional/listJson','RegionalController@resuljson')->name('listaRegional');
 
@@ -94,6 +88,8 @@ Route::get('Regional/Delete/{id}', 'RegionalController@DeleteRegional')->name('D
 #endregion
 
 #region Centro de formacion
+
+
 
 Route::get('CentroFormacion/listJson','CentrofController@resuljson')->name('listaCentrof');
 
@@ -136,9 +132,7 @@ Route::get('Nscl/Delete/{id}', 'NsclController@DeleteNscl')->name('DeleteNscl');
 
 #region TIPOPROGRAMA
 
-Route::get('TipoPrograma/insert', function(){
-    return view('TipoPrograma/insert');
-})->name('inserttipopro');
+Route::get('TipoPrograma/insert','TipoProController@ViewInsert' )->name('inserttipopro');
 
 Route::get('TipoPrograma/listJson','TipoProController@resuljson')->name('listaTipoPro');
 
@@ -158,9 +152,7 @@ Route::get('TipoPrograma/Delete/{id}', 'TipoProController@DeleteTipoPro')->name(
 
 #region CAMPO OCUPACIONAL
 
-Route::get('CampoOcupacional/insert', function(){
-    return view('CampoOcupacional/insert');
-})->name('insertcampoocu');
+Route::get('CampoOcupacional/insert', 'CampoOcuController@ViewInsert')->name('insertcampoocu');
 
 Route::get('CampoOcupacional/listJson','CampoOcuController@resuljson')->name('listaCampoOcu');
 
@@ -179,9 +171,7 @@ Route::get('CampoOcupacional/Delete/{id}', 'CampoOcuController@DeleteCampoOcu')-
 
 #region SECTORES
 
-Route::get('Sectores/insert', function(){
-    return view('Sectores/insert');
-})->name('insertsector');
+Route::get('Sectores/insert', 'SectorController@ViewInsert')->name('insertsector');
 
 Route::get('Sectores/listJson','SectorController@resuljson')->name('listaSector');
 
@@ -254,6 +244,12 @@ Route::get('Roles/Delete/{id}', 'RolController@DeleteRol')->name('DeleteRol');
 
 
 
+
+#endregion
+
+#region Funcionarios
+
+Route::post('auth/register', 'FuncionarioController@InsertFuncionario')->name('InsertFuncionario');
 
 #endregion
 

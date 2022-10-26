@@ -7,6 +7,17 @@ use App;
 
 class MesaController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    public function ViewInsert(){
+        return view ('MesaSectorial/insert');
+    }
+
+
     public function InsertMesa (Request $mesa){
         $instanciamesa = new App\mesa_sectorial;
         $instanciamesa -> nombre_sector = $mesa -> nombre_sector;

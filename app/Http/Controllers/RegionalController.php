@@ -7,6 +7,16 @@ use App;
 class RegionalController extends Controller
 {
 
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    public function ViewInsert(){
+        return view ('Regional/insert');
+    }
+
+
     public function InsertRegional(Request $regional)
     {
         $instanciaregional = new App\regionale;

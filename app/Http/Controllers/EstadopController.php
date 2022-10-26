@@ -28,6 +28,7 @@ class EstadopController extends Controller
 
     public function ViewEstadop ()
     {
+        
         $objetoretornado = App\Estado_Producto::All();
         return view('EstadoProducto/view', compact('objetoretornado'));
     }

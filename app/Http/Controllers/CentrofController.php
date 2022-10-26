@@ -8,6 +8,11 @@ use Illuminate\Support\Facades\DB;
 class CentrofController extends Controller
 
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function ViewInsertCentrof ()
     {
         $inforegional = App\regionale::All();

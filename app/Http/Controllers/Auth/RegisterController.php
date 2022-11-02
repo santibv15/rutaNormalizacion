@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\User;
+use App\funcionario;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -50,6 +51,9 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
+            'cedula_func' => ['required', 'string'],
+            'correo_insti_func' => ['required', 'string'],
+            'tel_func' => ['required', 'string'],
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'rol' => ['required', 'string'],
@@ -70,6 +74,18 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'rol' => $data['rol'],
             'password' => Hash::make($data['password']),
+
+            funcionario::create([
+                'cedula_func' => $data['cedula_func'],
+                'nombre_func' => $data['name'],
+                'correo_per_func' => $data['email'],
+                'correo_insti_func' => $data['correo_insti_func'],
+                'tel_func' => $data['tel_func'],
+                'rol_id' => $data['rol'],
+                
+            ])
         ]);
     }
+
+    
 }

@@ -14,7 +14,7 @@
                 <div class="card-header">{{ __('Register') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{route('InsertFuncionario')}}"> 
+                    <form method="POST" action="{{route('register')}}">
                     
                         @csrf
 
@@ -157,8 +157,13 @@ document.formEnviar.action = "{{ route('register') }}";
 document.formEnviar.target = "_blank";
 document.formEnviar.submit();
 
+<<<<<<< HEAD
 document.formEnviar.action = "{{ route('register') }}";
 document.formEnviar.target = "_self";
+=======
+ document.formEnviar.action = "{{ route('register') }}";
+ document.formEnviar.target = "_self";
+>>>>>>> caa0e56835dc30fb8c98d9693b6832f3465a3f45
 document.formEnviar.submit(); 
 
 return true;

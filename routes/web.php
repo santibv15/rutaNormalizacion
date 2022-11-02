@@ -254,10 +254,6 @@ Route::post('auth/register', 'Auth/RegisterController@InsertFuncionario')->name(
 #endregion
 
 
-<<<<<<< HEAD
 Auth::routes(['verify' =>true]);
-=======
-Auth::routes(['verify' => true]);
->>>>>>> caa0e56835dc30fb8c98d9693b6832f3465a3f45
 
 Route::get('/home', 'HomeController@index')->name('home');

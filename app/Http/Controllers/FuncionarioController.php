@@ -17,8 +17,9 @@ class FuncionarioController extends Controller
         $instanciafuncionario -> rol_id = $funcionario -> rol;
 
         $instanciafuncionario -> save();
-
+        
         return redirect('MesaSectorial/view') ->with('hecho', 'mesa regitrada');
+        return route('register');
 
     }
 

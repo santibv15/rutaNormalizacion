@@ -254,6 +254,6 @@ Route::post('auth/register', 'FuncionarioController@InsertFuncionario')->name('I
 #endregion
 
 
-Auth::routes();
+Auth::routes(['verify' =>true]);
 
 Route::get('/home', 'HomeController@index')->name('home');

@@ -249,11 +249,11 @@ Route::get('Roles/Delete/{id}', 'RolController@DeleteRol')->name('DeleteRol');
 
 #region Funcionarios
 
-Route::post('auth/register', 'FuncionarioController@InsertFuncionario')->name('InsertFuncionario');
+Route::post('auth/register', 'Auth/RegisterController@InsertFuncionario')->name('InsertFuncionario');
 
 #endregion
 
 
-Auth::routes();
+Auth::routes(['verify' => true]);
 
 Route::get('/home', 'HomeController@index')->name('home');

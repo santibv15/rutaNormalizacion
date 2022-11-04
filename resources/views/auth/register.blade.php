@@ -9,7 +9,7 @@
     <meta name="description" content="Vuexy admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
     <meta name="keywords" content="admin template, Vuexy admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="PIXINVENT">
-    <title>Register Multi Steps Page - Vuexy - Bootstrap HTML admin template</title>
+    <title>Registrar </title>
 
 
     <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('images/favicon/apple-icon-57x57.png') }}">
@@ -180,7 +180,7 @@
                                                 <h2 class="fw-bolder mb-75">Registrar</h2>
                                                 <span>Ingrese sus datos</span>
                                             </div>
-                                            <form>
+                                            <form method="POST" action="{{route('register')}}">
 
                                                 @csrf
                                                 <div class="row">
